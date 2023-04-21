@@ -13,7 +13,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #646cff;
+    color: var(--link-hover-color);
     text-decoration: underline;
 }
 
@@ -34,4 +34,8 @@ nav ul {
 
 .ThemeButton img {
     width: 25px
+}
+
+.ThemeButton:hover {
+    scale: 1.3;
 }

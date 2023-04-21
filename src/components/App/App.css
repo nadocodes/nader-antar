@@ -5,11 +5,13 @@
 }
 
 .dark {
+  --link-hover-color: rgba(255, 255, 255, 0.87);
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 }
 
 .light {
+  --link-hover-color: #242424;
   color: #6C63FF;
   background-color: #ffffff;
 }
