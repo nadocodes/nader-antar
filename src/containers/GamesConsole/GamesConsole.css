@@ -1,0 +1,12 @@
+.GamesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 10px 10px;
+    width: 460px;
+    height: 350px;
+    border: 1px solid #6C63FF;
+    border-radius: 5px;
+}
