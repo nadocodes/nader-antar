@@ -1,8 +1,10 @@
 import React from 'react'
 import './NavBar.css'
+import LightButton from '../../assets/dark-mode.svg';
+import DarkButton from '../../assets/light-mode.svg';
 
-function NavBar(props: { toggleTheme: () => void}){
-  const { toggleTheme } = props;
+function NavBar(props: { toggleTheme: () => void } & { theme: string }){
+  const { toggleTheme, theme } = props;
   return (
     <div>
         <nav>
@@ -11,7 +13,7 @@ function NavBar(props: { toggleTheme: () => void}){
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button onClick={toggleTheme}>Toggle</button>
+            <button className='ThemeButton' onClick={toggleTheme}><img src={theme === 'dark' ? LightButton : DarkButton} /></button>
         </nav>
     </div>
   )

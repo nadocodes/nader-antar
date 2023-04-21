@@ -6,9 +6,10 @@ import ScriptSvgLight from '../../assets/script-light.svg'
 function Header(props: { theme: string }) {
   const { theme } = props;
   return (
-    <div>
+    <div className="Header">
         <h1>Nader Antar</h1>
-        <img src={theme == 'dark' ? ScriptSvgDark : ScriptSvgLight} alt="Script" />
+        <h2>Web Engineer</h2>
+        <img className="ScriptSvg" src={theme == 'dark' ? ScriptSvgDark : ScriptSvgLight} alt="Script" />
     </div>
   )
 }

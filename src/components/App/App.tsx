@@ -21,9 +21,8 @@ function App() {
 
   return (
     <div className={`App ${theme}`}>
-      <NavBar toggleTheme={toggleTheme} />
+      <NavBar theme={theme} toggleTheme={toggleTheme} />
       <Header theme={theme} />
-      <h2>Web Engineer</h2>
     </div>
   )
 }

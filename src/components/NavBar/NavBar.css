@@ -1,0 +1,36 @@
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #646cff;
+    text-decoration: underline;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+    gap: 20px;
+}
+
+.ThemeButton {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.ThemeButton img {
+    width: 25px
+}
