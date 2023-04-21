@@ -5,7 +5,7 @@ import './App.css'
 
 
 function App() {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
 
   const toggleTheme = (): void => {
     if (theme === 'dark') {
@@ -16,6 +16,7 @@ function App() {
   }
 
   useEffect(() => {
+    localStorage.setItem('theme', theme);
     document.body.className = theme;
   }, [theme]);
 

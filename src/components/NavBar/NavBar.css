@@ -1,6 +1,6 @@
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     top: 0;
@@ -29,6 +29,7 @@ nav ul {
     border: none;
     background-color: transparent;
     cursor: pointer;
+    margin: 10px;
 }
 
 .ThemeButton img {
