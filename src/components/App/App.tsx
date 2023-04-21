@@ -1,10 +1,28 @@
+import React, { useState, useEffect } from 'react'
+import NavBar from '../NavBar/NavBar'
+import Header from '../Header/Header'
 import './App.css'
 
+
 function App() {
+  const [theme, setTheme] = useState('dark');
+
+  const toggleTheme = (): void => {
+    if (theme === 'dark') {
+      setTheme('light')
+    } else {
+      setTheme('dark')
+    }
+  }
+
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
 
   return (
-    <div className="App">
-      <h1>Nader Antar</h1>
+    <div className={`App ${theme}`}>
+      <NavBar toggleTheme={toggleTheme} />
+      <Header theme={theme} />
       <h2>Web Engineer</h2>
     </div>
   )
