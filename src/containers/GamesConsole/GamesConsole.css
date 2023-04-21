@@ -1,5 +1,6 @@
 .GamesContainer {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
@@ -9,4 +10,28 @@
     height: 350px;
     border: 1px solid #6C63FF;
     border-radius: 5px;
+}
+
+.games {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 800px;
+    padding: 10px 10px;
+}
+
+.gameButton {
+    background-color: #6C63FF;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 100px;
+    height: 75px;
 }
