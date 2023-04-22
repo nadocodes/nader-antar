@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { AiFillHome } from 'react-icons/ai'
 import './GamesConsole.css';
 
 export default function Games() {
@@ -41,7 +42,7 @@ export default function Games() {
           </div>}
       </div>
       <div className="controls">
-          <button className="menuButton" onClick={handleMenu}>Main Menu</button>
+          <button className="menuButton" onClick={handleMenu}><AiFillHome /></button>
       </div>
     </div>
   )
