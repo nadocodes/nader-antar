@@ -59,6 +59,7 @@
     justify-content: space-evenly;
     width: 100%;
     border-top: 1px solid #6C63FF;
+    border-radius: 3px;
 }
 
 .menuButton {
