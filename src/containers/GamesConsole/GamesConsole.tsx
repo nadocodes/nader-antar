@@ -13,8 +13,14 @@ export default function Games() {
         }
     }, [game]);
 
+    const handleMenu = (): void => {
+        setMenu(true);
+        setGame('');
+    }
+
   return (
-    <div className='GamesContainer'>
+    <div className='gamesContainer'>
+      <div className='gamesConsole'>
         {menu && <div className="menu">
         <h3 className="title">Games</h3>
         <p>Select A Game</p>
@@ -31,8 +37,12 @@ export default function Games() {
               <div className="game">
                   <button className="gameButton" onClick={() => setGame('')}>Coming Soon!</button>
               </div>
-          </div> 
-        </div>}
+            </div> 
+          </div>}
+      </div>
+      <div className="controls">
+          <button className="menuButton" onClick={handleMenu}>Main Menu</button>
+      </div>
     </div>
   )
 }
