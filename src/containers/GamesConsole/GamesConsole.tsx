@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { AiFillHome } from 'react-icons/ai'
+import RockPaperScissors from '../../components/Games/RockPaperScissors/RockPaperScissors'
 import './GamesConsole.css';
 
 export default function Games() {
@@ -7,7 +8,7 @@ export default function Games() {
     const [game, setGame] = useState('');
 
     useEffect(() => {
-        if (game !== '') {
+        if (game) {
             setMenu(false);
         } else {
             setMenu(true);
@@ -19,31 +20,32 @@ export default function Games() {
         setGame('');
     }
 
-  return (
-    <div className='gamesContainer'>
-      <div className='gamesConsole'>
-        {menu && <div className="menu">
-        <h3 className="title">Games</h3>
-        <p>Select A Game</p>
-          <div className="games">
-              <div className="game">
-                  <button className="gameButton" onClick={() => setGame('RockPaperScissors')}>Rock Paper Scissors</button>
-              </div>
-              <div className="game">
-                  <button className="gameButton" onClick={() => setGame('MemoryGame')}>Memory Game</button>
-              </div>
-              <div className="game">
-                  <button className="gameButton" onClick={() => setGame('')}>Coming Soon!</button>
-              </div>
-              <div className="game">
-                  <button className="gameButton" onClick={() => setGame('')}>Coming Soon!</button>
-              </div>
-            </div> 
-          </div>}
-      </div>
-      <div className="controls">
-          <button className="menuButton" onClick={handleMenu}><AiFillHome /></button>
-      </div>
-    </div>
-  )
+    return (
+        <div className='gamesContainer'>
+            <div className='gamesConsole'>
+                {menu && <div className="menu">
+                    <h3 className="menuTitle">Mini Games</h3>
+                    <p className="menuText">Select A Game</p>
+                    <div className="games">
+                        <div className="game">
+                            <button className="gameButton" onClick={() => setGame('RockPaperScissors')}>Rock Paper Scissors</button>
+                        </div>
+                        <div className="game">
+                            <button className="gameButton" onClick={() => setGame('MemoryGame')}>Memory Game</button>
+                        </div>
+                        <div className="game">
+                            <button className="gameButton" onClick={() => setGame('')}>Coming Soon!</button>
+                        </div>
+                        <div className="game">
+                            <button className="gameButton" onClick={() => setGame('')}>Coming Soon!</button>
+                        </div>
+                    </div>
+                </div>}
+            {game === 'RockPaperScissors' && <RockPaperScissors className="gameDisplay"/>}
+            </div>
+            <div className="controls">
+                <button className="menuButton" onClick={handleMenu}><AiFillHome /></button>
+            </div>
+        </div>
+    )
 }
