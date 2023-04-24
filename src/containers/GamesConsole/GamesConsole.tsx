@@ -41,7 +41,7 @@ export default function Games() {
                         </div>
                     </div>
                 </div>}
-            {game === 'RockPaperScissors' && <RockPaperScissors className="gameDisplay"/>}
+            {game === 'RockPaperScissors' && <div className="gameDisplay"><RockPaperScissors /></div>}
             </div>
             <div className="controls">
                 <button className="menuButton" onClick={handleMenu}><AiFillHome /></button>

@@ -1,18 +1,18 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import RPSPlayer from './RPSPlayer'
 import RPSActionButton from './RPSActionButton'
 import RPSGetWinner from './RPSGetWinner'
 import './RockPaperScissors.css'
 
-function RockPaperScissors() {
-  const [playerScore, setPlayerScore] = useState(0)
-  const [computerScore, setComputerScore] = useState(0)
-  const [playerAction, setPlayerAction] = useState('')
-  const [computerAction, setComputerAction] = useState('')
-  const [winner, setWinner] = useState('')
-  const [round, setRound] = useState(0)
+function RockPaperScissors(): JSX.Element {
+  const [playerScore, setPlayerScore] = useState<number>(0)
+  const [computerScore, setComputerScore] = useState<number>(0)
+  const [playerAction, setPlayerAction] = useState<string>('')
+  const [computerAction, setComputerAction] = useState<string>('')
+  const [winner, setWinner] = useState<number | undefined>(undefined)
+  const [round, setRound] = useState<number>(0)
 
-  const actions = {
+  const actions: Record<string, string[]> = {
     paper: ['rock', 'spock'],
     scissors: ['paper', 'lizard'],
     rock: ['scissors', 'lizard'],
@@ -20,13 +20,13 @@ function RockPaperScissors() {
     spock: ['scissors', 'rock'],
   };
   
-  const randomAction = () => {
+  const randomAction = (): string => {
     const actionsArray = Object.keys(actions);
     const randomIndex = Math.floor(Math.random() * actionsArray.length);
     return actionsArray[randomIndex];
   }
 
-  const onActionSelected = (selectedAction) => {
+  const onActionSelected = (selectedAction: string): void => {
     setPlayerAction(selectedAction);
     const computerSelectedAction = randomAction();
     setComputerAction(computerSelectedAction);
@@ -41,7 +41,7 @@ function RockPaperScissors() {
     setRound(round + 1);
   }
 
-  const calculateWinner = (playerAction, computerAction) => {
+  const calculateWinner = (playerAction: string, computerAction: string): number | undefined => {
     if (playerAction === computerAction) {
       return 0;
     } else if (actions[playerAction].includes(computerAction)) {
@@ -49,10 +49,8 @@ function RockPaperScissors() {
     } else if (actions[computerAction].includes(playerAction)) {
       return 1;
     }
-    return null;
+    return undefined;
   }
-
-  
 
   return (
     <div className="RockPaperScissors">
@@ -68,7 +66,6 @@ function RockPaperScissors() {
           <RPSActionButton action='scissors' onActionSelected={onActionSelected} />
           <RPSActionButton action='lizard' onActionSelected={onActionSelected} />
           <RPSActionButton action='spock' onActionSelected={onActionSelected} />
-
         </div>
         <RPSGetWinner winner={winner} />
       </div>
@@ -76,4 +73,4 @@ function RockPaperScissors() {
   )
 }
 
-export default RockPaperScissors
+export default RockPaperScissors;
