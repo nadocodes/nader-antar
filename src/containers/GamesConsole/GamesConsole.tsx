@@ -17,7 +17,7 @@ export default function Games() {
 
     const handleSelectGame = (gameSelected: string): void => {
         setGame(gameSelected);
-        setMenu(false)
+        setMenu(false);
     }
 
     return (
@@ -29,18 +29,18 @@ export default function Games() {
                     <div className="games">
                         {gamesId.map((gameId, idx) => {
                             if (gameId && gameName[idx]){
-                            return (
-                                <div className="game">
-                                    <button className="gameButton" onClick={() => handleSelectGame(gameId)}>{gameName[idx]}</button>
-                                </div>
-                            )} else {
                                 return (
                                     <div className="game">
-                                        <button className="gameButton" onClick={() => setGame('')}>Coming Soon!</button>
+                                        <button className="gameButton" onClick={() => handleSelectGame(gameId)}>{gameName[idx]}</button>
                                     </div>
-                                )
-                            }
-                        })
+                                )} else {
+                                    return (
+                                        <div className="game">
+                                            <button className="gameButton" onClick={() => setGame('')}>Coming Soon!</button>
+                                        </div>
+                                    )
+                                }
+                            })
                         }
 
                     </div>

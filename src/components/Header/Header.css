@@ -1,9 +1,14 @@
 .Header {
     display: flex;
     min-height: 100vh;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     place-items: center;
     min-width: 100vw;
+    gap: 25px;
+}
+
+.myInfo {
+    text-align: left;
 }
