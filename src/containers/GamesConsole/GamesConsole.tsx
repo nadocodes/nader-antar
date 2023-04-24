@@ -9,17 +9,14 @@ export default function Games() {
     const [gameName, setGameName] = useState(['Rock Paper Scissors', 'Memory Game']);
     const [gamesId, setGamesId] = useState(['RockPaperScissors', 'MemoryGame', '', '']);
 
-    useEffect(() => {
-        if (game) {
-            setMenu(false);
-        } else {
-            setMenu(true);
-        }
-    }, [game]);
-
     const handleMenu = (): void => {
         setMenu(true);
         setGame('');
+    }
+
+    const handleSelectGame = (gameSelected: string): void => {
+        setGame(gameSelected);
+        setMenu(false)
     }
 
     return (
@@ -33,7 +30,7 @@ export default function Games() {
                             if (gameId){
                             return (
                                 <div className="game">
-                                    <button className="gameButton" onClick={() => setGame(gameId)}>{gameName[idx]}</button>
+                                    <button className="gameButton" onClick={() => handleSelectGame(gameId)}>{gameName[idx]}</button>
                                 </div>
                             )} else {
                                 return (
