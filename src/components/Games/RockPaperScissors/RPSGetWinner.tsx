@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface Props {
-  winner?: number;
+  winner: number;
 }
 
 const RPSGetWinner: React.FC<Props> = ({ winner = 0 }) => {

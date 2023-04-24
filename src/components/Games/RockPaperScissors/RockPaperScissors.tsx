@@ -9,7 +9,7 @@ function RockPaperScissors(): JSX.Element {
   const [computerScore, setComputerScore] = useState<number>(0)
   const [playerAction, setPlayerAction] = useState<string>('')
   const [computerAction, setComputerAction] = useState<string>('')
-  const [winner, setWinner] = useState<number | undefined>(undefined)
+  const [winner, setWinner] = useState<number>(3)
   const [round, setRound] = useState<number>(0)
 
   const actions: Record<string, string[]> = {
@@ -41,7 +41,7 @@ function RockPaperScissors(): JSX.Element {
     setRound(round + 1);
   }
 
-  const calculateWinner = (playerAction: string, computerAction: string): number | undefined => {
+  const calculateWinner = (playerAction: string, computerAction: string): number => {
     if (playerAction === computerAction) {
       return 0;
     } else if (actions[playerAction].includes(computerAction)) {
@@ -49,7 +49,7 @@ function RockPaperScissors(): JSX.Element {
     } else if (actions[computerAction].includes(playerAction)) {
       return 1;
     }
-    return undefined;
+    return 3;
   }
 
   return (
