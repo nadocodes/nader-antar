@@ -15,7 +15,6 @@
     justify-content: center;
     width: 460px;
     height: 300px;
-    border-radius: 5px;
     margin-top: 5px;
 }
 
@@ -97,8 +96,4 @@
     background-color: #4F46E5;
     box-shadow: 0 1px #666;
     transform: translateY(1px);
-}
-
-.gameDisplay {
-    width: 100%;
 }
