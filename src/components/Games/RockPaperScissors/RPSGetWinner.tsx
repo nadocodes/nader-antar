@@ -9,6 +9,7 @@ const RPSGetWinner: React.FC<Props> = ({ winner = 0 }) => {
     '-1': 'You Win!',
     '1': 'You Lose!',
     '0': "It's a Draw!",
+    '3': 'Your move!',
   };
   return <h3>{text[winner]}</h3>;
 };
