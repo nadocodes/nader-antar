@@ -1,11 +1,12 @@
 .Header {
     display: flex;
     min-height: 100vh;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-end;
+    justify-content: space-evenly;
     min-width: 100vw;
+    align-items: center;
+    gap: 10px;
 }
 
 .myInfo {
@@ -32,9 +33,6 @@
 @media screen and (max-width: 1400px) {
     .ScriptSvg {
         display: none;
-    }
-    .Header {
-        align-items: center;
     }
     .mainContainer {
         flex-direction: column;

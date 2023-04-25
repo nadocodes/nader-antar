@@ -8,7 +8,7 @@ export default function Games() {
     const [game, setGame] = useState('');
 
     const gameName: string[] = ['Rock Paper Scissors', 'Memory Game'];
-    const gamesId: string[] = ['RockPaperScissors', 'MemoryGame', '', ''];
+    const gamesId: string[] = ['RockPaperScissors', 'MemoryGame', '', '', ''];
 
     const handleMenu = (): void => {
         setMenu(true);
@@ -30,12 +30,12 @@ export default function Games() {
                         {gamesId.map((gameId, idx) => {
                             if (gameId && gameName[idx]){
                                 return (
-                                    <div className="game">
+                                    <div key={`game: ${idx} ${gameId}`} className="game">
                                         <button className="gameButton" onClick={() => handleSelectGame(gameId)}>{gameName[idx]}</button>
                                     </div>
                                 )} else {
                                     return (
-                                        <div className="game">
+                                        <div key={`game: ${idx} ${gameId}`} className="game">
                                             <button className="gameButton" onClick={() => setGame('')}>Coming Soon!</button>
                                         </div>
                                     )
