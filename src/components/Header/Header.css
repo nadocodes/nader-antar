@@ -1,25 +1,23 @@
 .Header {
     display: flex;
     min-height: 100vh;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    place-items: center;
     min-width: 100vw;
 }
 
 .myInfo {
     text-align: left;
     line-height: 1;
-    margin: 20px;
 }
 
 .mainContainer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 20px;
-    margin-top: 100px;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 .ScriptSvg {
@@ -28,4 +26,19 @@
     max-width: 500px;
     max-height: 500px;
     align-self: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+    .mainContainer {
+        flex-direction: column;
+    }
+    .ScriptSvg {
+        display: none;
+    }
+    .Header {
+        flex-direction: column-reverse;
+    }
+    .gamesContainer {
+        display: none;
+    }
 }
