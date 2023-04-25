@@ -1,9 +1,10 @@
 .Header {
     display: flex;
     min-height: 100vh;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-end;
     min-width: 100vw;
 }
 
@@ -15,8 +16,8 @@
 .mainContainer {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-evenly;
+    align-items: center;
     width: 100%;
 }
 
@@ -28,17 +29,14 @@
     align-self: flex-end;
 }
 
-@media screen and (max-width: 768px) {
-    .mainContainer {
-        flex-direction: column;
-    }
+@media screen and (max-width: 1400px) {
     .ScriptSvg {
         display: none;
     }
     .Header {
-        flex-direction: column-reverse;
+        align-items: center;
     }
-    .gamesContainer {
-        display: none;
+    .mainContainer {
+        flex-direction: column;
     }
 }
