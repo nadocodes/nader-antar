@@ -25,7 +25,7 @@ function About() {
     }
 
   return (
-    <div className='About'>
+    <div className='About' id='about'>
         <div className='aboutContainer'>
             <h2>Hi, I'm Nader!</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ea nulla explicabo reprehenderit labore similique velit officia, autem sunt repudiandae in laboriosam voluptates, minima dolorum architecto. Odit molestiae atque nisi.</p>
