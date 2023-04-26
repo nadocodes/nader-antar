@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import NavBar from '../NavBar/NavBar'
 import Header from '../Header/Header'
+import About from '../About/About'
 import './App.css'
 
 
@@ -24,6 +25,7 @@ function App() {
     <div className={`App ${theme}`}>
       <NavBar theme={theme} toggleTheme={toggleTheme} />
       <Header theme={theme} />
+      <About />
     </div>
   )
 }
