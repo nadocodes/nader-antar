@@ -1,10 +1,8 @@
 .Header {
     display: flex;
-    min-height: 100vh;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    min-width: 100vw;
     align-items: center;
     gap: 10px;
 }

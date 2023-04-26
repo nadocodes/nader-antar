@@ -19,3 +19,8 @@
   color: #6C63FF;
   background-color: #ffffff;
 }
+
+.sectionDefault {
+  min-height: 100vh;
+  min-width: 100vw;
+}

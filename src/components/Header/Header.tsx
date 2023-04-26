@@ -7,7 +7,7 @@ import Games from '../../containers/GamesConsole/GamesConsole'
 function Header(props: { theme: string }) {
   const { theme } = props;
   return (
-    <div className="Header">
+    <div className="Header sectionDefault">
         <Games />
       <div className="mainContainer">
       <div className="myInfo">

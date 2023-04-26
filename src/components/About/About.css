@@ -41,12 +41,21 @@
     align-items: center;
     width: 100px;
     height: 100px;
+    transition: transform 0.5s ease-in-out;
 }
 
-@media screen and (max-width: 768px) {
+.skill:hover {
+    transform: scale(1.5);
+    color: #6C63FF;
+}
+
+@media screen and (max-width: 1024px) {
     .aboutContainer {
         width: 100%;
-    }
+    }  
+}
+
+@media screen and (max-width: 430px) {
     .skills {
         width: 95%;
         height: 360px;
