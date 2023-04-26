@@ -1,6 +1,6 @@
 .About {
     display: flex;
-    min-height: 100vh;
+    min-height: 75vh;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
