@@ -27,8 +27,8 @@ function About() {
   return (
     <div className='About' id='about'>
         <div className='aboutContainer'>
-            <h2>Hi, I'm Nader!</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ea nulla explicabo reprehenderit labore similique velit officia, autem sunt repudiandae in laboriosam voluptates, minima dolorum architecto. Odit molestiae atque nisi.</p>
+            <h2>Hello, World!</h2>
+            <p>I am a <em>front-end engineer</em> with a passion for coding. When I'm not busy transforming designs into seamless user experiences or untangling complex code, you'll find me sipping my favorite cup of coffee, dreaming up my next tech adventure. Driven by curiosity, I'm constantly learning and evolving to ensure my digital creations are as amazing as they are functional. Let's ignite the magic of code together and find happiness coding! <br/>🚀💻🌟</p>
             <div className='skillsContainer'>
                 <h3>Skills</h3>
                 <div className='skills'>
