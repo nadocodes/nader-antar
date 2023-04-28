@@ -33,6 +33,7 @@
         display: none;
     }
     .mainContainer {
-        flex-direction: column;
+        flex-direction: column-reverse;
+        gap: 50px;
     }
 }

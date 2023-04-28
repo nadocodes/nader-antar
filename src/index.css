@@ -39,12 +39,14 @@ h1 {
   font-size: 8rem;
   padding: 0;
   margin: 0;
+  transition: font-size 0.2s ease-in-out;
 }
 
 h2 {
   font-size: 4.5rem;
   padding: 0;
   margin: 0;
+  transition: font-size 0.2s ease-in-out;
 }
 
 h3 {
@@ -59,7 +61,7 @@ h4 {
   margin: 0;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1450px) {
   h1 {
       font-size: 5rem;
   }
