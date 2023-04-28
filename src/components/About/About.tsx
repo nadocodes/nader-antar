@@ -32,10 +32,10 @@ function About() {
             <div className='skillsContainer'>
                 <h3>Skills</h3>
                 <div className='skills'>
-                {skills.map((skill, idx) => { 
+                {skills.map((skill) => { 
                     const Icon = skillIcons[skill];
                 return ( 
-                        <div key={`skill: ${idx}`} className='skill'>
+                        <div key={`skill: ${skill}`} className='skill'>
                             <Icon size={50} />
                         </div>
                     )})}
