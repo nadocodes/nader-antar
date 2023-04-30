@@ -20,7 +20,13 @@
   background-color: #ffffff;
 }
 
-.sectionDefault {
+.primaryDefault {
   min-height: 100vh;
   min-width: 100vw;
+}
+
+.secondaryDefault {
+  min-height: 60vh;
+  min-width: 100vw;
+  background-color: #f2f2f231;
 }

@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react'
-import NavBar from '../NavBar/NavBar'
-import Header from '../Header/Header'
-import About from '../About/About'
-import Projects from '../Projects/Projects'
-import './App.css'
+import React, { useState, useEffect } from 'react';
+import NavBar from '../NavBar/NavBar';
+import Header from '../Header/Header';
+import About from '../About/About';
+import Projects from '../Projects/Projects';
+import Contact from '../Contact/Contact';
+import './App.css';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
       <Header theme={theme} />
       <About />
       <Projects />
+      <Contact />
     </div>
   )
 }
