@@ -3,7 +3,9 @@ import './Contact.css'
 
 function Contact() {
   return (
-    <div className='Contact secondaryDefault' id='contact'>Contact</div>
+    <div className='Contact secondaryDefault' id='contact'>
+      <h2>Contact Me</h2>
+    </div>
   )
 }
 
