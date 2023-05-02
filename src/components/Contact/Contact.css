@@ -11,4 +11,22 @@
     align-items: flex-start;
     justify-content: space-evenly;
     margin: auto;
+    padding: 10px;
+    border: 3px solid #3F3D56;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.sendEmail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px auto;
+    padding: 10px;
+    border: 3px solid #3F3D56;
+    border-radius: 5px;
+}
+
+.sendEmail:hover {
+    cursor: pointer;
 }
