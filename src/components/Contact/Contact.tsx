@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import './Contact.css'
+import React, { useState } from 'react';
+import { send } from 'emailjs-com';
+import './Contact.css';
 
 function Contact() {
   const [name, setName] = useState('');
@@ -23,7 +24,7 @@ function Contact() {
     setMessage(e.target.value);
   }
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const sendMail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(name, email, subject, message);
     const data = {
@@ -32,34 +33,42 @@ function Contact() {
       subject,
       message
     };
-
-    fetch('/send-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    }).then(response => {
-      if (response.ok) {
-        alert('Your message has been sent.');
-      } else {
-        alert('There was a problem sending your message.');
+    if (!email || !message) {
+      alert('Please fill out required fields');
+      return;
+    } else {
+      send(
+        'service_lucky13sep',
+        'template_mrwvdap',
+        data,
+        'rSE5pk3vVd6zNp2qw'
+      )
+      .then((response) => {
+        console.log(response);
+        setName('');
+        setEmail('');
+        setSubject('');
+        setMessage('');
+      })
+      .catch((error) => {
+        console.log(error);
       }
-    });
+      );
+    }
   }
 
   return (
     <div className='Contact secondaryDefault' id='contact'>
       <h2>Contact Me</h2>
-      <form className='ContactForm' onSubmit={handleSubmit}>
+      <form className='ContactForm' onSubmit={sendMail}>
         <label htmlFor='name'>Name: </label>
-        <input type='text' id='name' name='name' placeholder='Your name...' onChange={handleNameChange} />
+        <input type='text' id='name' name='name' placeholder='Your name...' value={name} onChange={handleNameChange} />
         <label htmlFor='email'>Email: </label>
-        <input type='email' id='email' name='email' placeholder='Your email...' onChange={handleEmailChange}/>
+        <input type='email' id='email' name='email' placeholder='Your email...' value={email} onChange={handleEmailChange}/>
         <label htmlFor='subject'>Subject: </label>
-        <input type='text' id='subject' name='subject' placeholder='Subject...' onChange={handleSubjectChange}/>
+        <input type='text' id='subject' name='subject' placeholder='Subject...' value={subject} onChange={handleSubjectChange}/>
         <label htmlFor='message'>Message: </label>
-        <textarea id='message' name='message' placeholder='Your message...' rows={10} cols={60} onChange={handleMessageChange} ></textarea>
+        <textarea id='message' name='message' placeholder='Your message...' value={message} rows={10} cols={60} onChange={handleMessageChange} ></textarea>
         <input type='submit' value='Submit' />
       </form>
       <p>Feel free to reach out to me at <a href='mailto:naderantar96@gmail.com'>NaderAntar96@gmail.com</a></p>
