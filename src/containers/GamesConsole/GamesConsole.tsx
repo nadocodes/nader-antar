@@ -48,7 +48,7 @@ export default function Games() {
             {game === 'RockPaperScissors' && <RockPaperScissors />}
             </div>
             <div className="controls">
-                <button className="menuButton" onClick={handleMenu}><AiFillHome /></button>
+                <button className="menuButton" onClick={handleMenu} aria-label='Return to game selection button'><AiFillHome /></button>
             </div>
         </div>
     )

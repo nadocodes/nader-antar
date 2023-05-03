@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import './Header.css'
-import ScriptSvgDark from '../../assets/script-dark.svg'
-import ScriptSvgLight from '../../assets/script-light.svg'
-import Games from '../../containers/GamesConsole/GamesConsole'
+import React, { useState } from 'react';
+import './Header.css';
+import ScriptSvgDark from '../../assets/script-dark.svg';
+import ScriptSvgLight from '../../assets/script-light.svg';
+import Games from '../../containers/GamesConsole/GamesConsole';
 
 function Header(props: { theme: string }) {
   const { theme } = props;
@@ -10,8 +10,8 @@ function Header(props: { theme: string }) {
     <div className="Header primaryDefault" id='home'>
       <div className="mainContainer">
       <div className="myInfo">
-        <h2>Nader Antar</h2>
-        <h1>Web Engineer</h1>
+        <h1>Nader Antar</h1>
+        <h2>Web Engineer</h2>
       </div>
         <Games />
         {/* <img className="ScriptSvg" src={theme == 'dark' ? ScriptSvgDark : ScriptSvgLight} alt="Script" /> */}
