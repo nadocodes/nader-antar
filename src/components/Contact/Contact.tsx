@@ -7,6 +7,8 @@ function Contact() {
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
+  const [sent, setSent] = useState(false);
+  const [sentError, setSentError] = useState(false);
 
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
@@ -34,7 +36,7 @@ function Contact() {
       message
     };
     if (!email || !message) {
-      alert('Please fill out required fields');
+      setSentError(true);
       return;
     } else {
       send(
@@ -49,6 +51,8 @@ function Contact() {
         setEmail('');
         setSubject('');
         setMessage('');
+        setSent(true);
+        setSentError(false);
       })
       .catch((error) => {
         console.log(error);
@@ -75,6 +79,10 @@ function Contact() {
         </div>
         <label htmlFor='message'>Message: </label>
         <textarea id='message' name='message' placeholder='Your message...' value={message} rows={10} cols={60} onChange={handleMessageChange} ></textarea>
+        <div className='formFeedback'>
+          {sentError && <p id='warning'>Please fill out required fields</p>}
+          {sent && <p id='success'>Success! Thank you for reaching out!</p>}
+        </div>
         <input type='submit' value='Send' className='sendEmail' />
       </form>
       <p>Feel free to reach out to me at <a href='mailto:naderantar96@gmail.com'>NaderAntar96@gmail.com</a></p>

@@ -30,3 +30,15 @@
 .sendEmail:hover {
     cursor: pointer;
 }
+
+.formFeedback {
+    margin: 5px auto;
+}
+
+#success {
+    color: green;
+}
+
+#warning {
+    color: yellow;
+}
