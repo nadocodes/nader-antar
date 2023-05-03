@@ -1,27 +1,40 @@
-import React from 'react'
-import * as icons from 'react-icons/fa'
-import * as icons2 from 'react-icons/si'
-import './About.css'
+import React from 'react';
+import { FaHtml5,
+    FaCss3Alt,
+    FaJsSquare,
+    FaPython,
+    FaReact,
+    FaNodeJs,
+    FaDatabase,
+    FaGitAlt,
+    FaGithub,
+    FaFigma } from 'react-icons/fa';
+import { SiJquery,
+    SiRedux,
+    SiTypescript,
+    SiNetlify,
+    SiAdobe } from 'react-icons/si';
+import './About.css';
 
 function About() {
     const skills = ['html5', 'css3', 'JavaScript', 'python', 'react', 'redux', 'typeScript', 'jquery', 'node.js', 'MongoDB', 'GitHub', 'git', 'netlify', 'figma', 'Adobe Creative Suite'];
     
     const skillIcons: any = {
-        'html5': icons.FaHtml5,
-        'css3': icons.FaCss3Alt,
-        'JavaScript': icons.FaJsSquare,
-        'python': icons.FaPython,
-        'jquery': icons2.SiJquery,
-        'react': icons.FaReact,
-        'redux': icons2.SiRedux,
-        'typeScript': icons2.SiTypescript,
-        'node.js': icons.FaNodeJs,
-        'MongoDB': icons.FaDatabase,
-        'git': icons.FaGitAlt,
-        'GitHub': icons.FaGithub,
-        'netlify': icons2.SiNetlify,
-        'figma': icons.FaFigma,
-        'Adobe Creative Suite': icons2.SiAdobe
+        'html5': FaHtml5,
+        'css3': FaCss3Alt,
+        'JavaScript': FaJsSquare,
+        'python': FaPython,
+        'jquery': SiJquery,
+        'react': FaReact,
+        'redux': SiRedux,
+        'typeScript': SiTypescript,
+        'node.js': FaNodeJs,
+        'MongoDB': FaDatabase,
+        'git': FaGitAlt,
+        'GitHub': FaGithub,
+        'netlify': SiNetlify,
+        'figma': FaFigma,
+        'Adobe Creative Suite': SiAdobe
     }
 
   return (
