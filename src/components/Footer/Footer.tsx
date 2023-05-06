@@ -5,7 +5,6 @@ import './Footer.css'
 function Footer() {
   return (
     <div className='Footer'>
-        <p>© Nader Antar 2023</p>
         <div className='footerLinks'>
           <a href='https://github.com/nadocodes' target='_blank' rel='noopener noreferrer'>
             <FaGithub size={30} />
@@ -17,6 +16,7 @@ function Footer() {
             <FaEnvelope size={30} />
           </a>
         </div>
+        <p>© Nader Antar 2023</p>
     </div>
   )
 }
