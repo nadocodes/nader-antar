@@ -6,18 +6,26 @@
 .App {
   display: flex;
   flex-direction: column;
+  background-color: var(--primary-bg-color);
+  color: var(--text-color);
 }
 
 .dark {
-  --link-hover-color: rgba(255, 255, 255, 0.87);
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  --primary-bg-color: #242424;
+  --secondary-bg-color: #6C41EC;
+  --text-color: #FFFFFF;
+  --border-color: #242424;
+  --link-color: #6C41EC;
+  --link-hover-color: #FFFFFF;
 }
 
 .light {
+  --primary-bg-color: #6C41EC;
+  --secondary-bg-color: #ffffff;
+  --text-color: #242424;
+  --border-color: #010C3F;
+  --link-color: #FFFFFF;
   --link-hover-color: #242424;
-  color: #6C63FF;
-  background-color: #ffffff;
 }
 
 .primaryDefault {
