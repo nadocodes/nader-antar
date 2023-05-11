@@ -44,7 +44,7 @@
 
 .skill:hover {
     transform: scale(1.5);
-    color: #6C63FF;
+    color: var(--secondary-bg-color);
 }
 
 @media screen and (max-width: 1024px) {
