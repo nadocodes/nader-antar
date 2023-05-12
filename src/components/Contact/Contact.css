@@ -10,6 +10,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
+    width: 30%;
     margin: auto;
     padding: 10px;
     background-color: var(--secondary-bg-color);
@@ -37,10 +38,37 @@
     margin: 5px auto;
 }
 
+.contactInput {
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    padding: 5px;
+}
+
+#message {
+    width: 90%;
+    height: 100px;
+    resize: none;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    padding: 5px;
+}
+
 #success {
     color: green;
 }
 
 #warning {
     color: yellow;
+}
+
+@media screen and (max-width: 430px) {
+    .ContactForm {
+        width: 90%;
+    }
 }

@@ -56,11 +56,6 @@
 @media screen and (max-width: 430px) {
     .skills {
         width: 95%;
-        height: 360px;
-        overflow-y: scroll;
-        border: 3px solid var(--border-color);
-        border-radius: 5px;
-        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
     }
     .skillsContainer {
         margin-top: 10px;
