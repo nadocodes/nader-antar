@@ -36,14 +36,14 @@ body {
 }
 
 h1 {
-  font-size: 8rem;
+  font-size: 6.5rem;
   padding: 0;
   margin: 0;
   transition: font-size 0.2s ease-in-out;
 }
 
 h2 {
-  font-size: 4.5rem;
+  font-size: 4rem;
   padding: 0;
   margin: 0;
   transition: font-size 0.2s ease-in-out;

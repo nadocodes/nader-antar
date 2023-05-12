@@ -25,7 +25,6 @@ export default function Games() {
             <div className='gamesConsole'>
                 {menu && <div className="menu">
                     <h3 className="menuTitle">Mini Games</h3>
-                    <p className="menuText">Select A Game</p>
                     <div className="games">
                         {gamesId.map((gameId, idx) => {
                             if (gameId && gameName[idx]){

@@ -2,16 +2,16 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
-    width: 600px;
-    height: 550px;
-    min-width: 450px;
-    min-height: 400px;
+    justify-content: space-between;
+    width: 320px;
+    height: 560px;
+    min-width: 250px;
+    min-height: 500px;
     border: 3px solid var(--border-color);
-    border-radius: 5px;
+    border-radius: 10px;
     transition: all 0.2s ease-in-out;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    background: var(--bg-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    background: var(--secondary-bg-color);
 }
 
 .gamesConsole {
@@ -20,21 +20,17 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    height: 300px;
     height: 90%;
 }
 
 .games {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-content: space-around;
-    width: 96%;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: space-evenly;
+    width: 100%;
     margin: 16px auto;
     height: 100%;
-    border: 3px solid var(--border-color);
-    border-radius: 5px;
     overflow-y: scroll;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .game {
@@ -42,7 +38,8 @@
 }
 
 .menu {
-    height: 80%;
+    height: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -58,7 +55,7 @@
 }
 
 .gameButton {
-    background-color: var(--secondary-bg-color);
+    background-color: var(--primary-bg-color);
     border: none;
     border-radius: 5px;
     color: var(--text-color);
@@ -71,16 +68,17 @@
     text-decoration: none;
     width: 100px;
     height: 75px;
+    transition: all 0.1s ease-in-out;
 }
 
 .gameButton:hover {
-    background-color: #4F46E5;
+    scale: 1.1;
 }
 
 .gameButton:active {
-    background-color: #4F46E5;
     box-shadow: 0 2px #666;
     transform: translateY(2px);
+    scale: 1.05;
 }
 
 .controls {
@@ -91,28 +89,27 @@
     justify-content: center;
     width: 100%;
     border-top: 2.5px solid var(--border-color);
-    border-radius: 3px;
+    border-radius: 5px;
     height: 9%;
+    background-color: var(--primary-bg-color);
 }
 
 .menuButton {
-    background-color: var(--secondary-bg-color);
-    border: none;
-    border-radius: 15px;
+    background-color: var(--bg-color);
+    border: 1.5px solid var(--border-color);
+    border-radius: 50px;
     color: var(--text-color);
     cursor: pointer;
     font-size: 1.2rem;
     height: 30px;
-    width: 75px;
     font-weight: bold;
 }
 
 .menuButton:hover {
-    background-color: #4F46E5;
+    background-color: var(--secondary-bg-color);
 }
 
 .menuButton:active {
-    background-color: #4F46E5;
     box-shadow: 0 1px #666;
     transform: translateY(1px);
 }
@@ -125,7 +122,7 @@
 
 @media screen and (max-width: 1450px) {
     .gamesContainer {
-        width: 400px;
-        height: 350px;
+        width: 300px;
+        height: 500px;
     }
 }
