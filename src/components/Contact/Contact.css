@@ -47,6 +47,11 @@
     padding: 5px;
 }
 
+.contactInput::placeholder {
+    color: var(--text-color);
+    opacity: 1; /* Firefox */
+  }
+
 #message {
     width: 90%;
     height: 100px;
