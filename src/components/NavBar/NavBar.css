@@ -12,10 +12,6 @@ nav a {
     text-decoration: none;
 }
 
-nav a:hover {
-    color: var(--link-hover-color);
-}
-
 nav ul {
     display: flex;
     list-style: none;
