@@ -8,7 +8,6 @@
 .ContactForm {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: space-evenly;
     height: 450px;
     width: 370px;
@@ -51,26 +50,44 @@
 .contactInput::placeholder {
     color: var(--text-color);
     opacity: 1; /* Firefox */
-  }
+}
+
+.formField {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 5px 2px;
+}
+
+#name {
+    width: 45%;
+}
+
+#email {
+    width: 45%;
+}
+
+#subject {
+    width: 95%;
+}
 
 #message {
-    width: 90%;
-    height: 100px;
+    width: 95%;
+    height: 500px;
     resize: none;
     border: 2px solid var(--border-color);
     border-radius: 5px;
     background-color: var(--primary-bg-color);
     color: var(--text-color);
-    font-family: var(--font-family);
     padding: 5px;
 }
 
 #success {
-    color: green;
+    color: #35af35;
 }
 
 #warning {
-    color: yellow;
+    color: #fc9c2f;
 }
 
 @media screen and (max-width: 768px) {

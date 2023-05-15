@@ -66,16 +66,12 @@ function Contact() {
       <h2>Contact Me</h2>
       <form className='ContactForm' onSubmit={sendMail}>
         <div className='formField'>
-          <label htmlFor='name'>Name: </label>
-          <input type='text' id='name' className='contactInput' name='name' placeholder='Your name...' value={name} onChange={handleNameChange} />
-        </div>
-        <div className='formField'>
-          <label htmlFor='email'>Email: </label>
-          <input type='email' id='email' className='contactInput' name='email' placeholder='Your email...' value={email} onChange={handleEmailChange}/>
-        </div>
-        <div className='formField'>
-          <label htmlFor='subject'>Subject: </label>
-          <input type='text' id='subject' className='contactInput' name='subject' placeholder='Subject...' value={subject} onChange={handleSubjectChange}/>
+          <label htmlFor='name' />
+          <input type='text' id='name' className='contactInput' name='name' placeholder='Name' value={name} onChange={handleNameChange} />
+          <label htmlFor='email' />
+          <input type='email' id='email' className='contactInput' name='email' placeholder='Email Address' value={email} onChange={handleEmailChange}/>
+          <label htmlFor='subject' />
+          <input type='text' id='subject' className='contactInput' name='subject' placeholder='Subject' value={subject} onChange={handleSubjectChange}/>
         </div>
         <label htmlFor='message'>Message: </label>
         <textarea id='message' className='contactInput' name='message' placeholder='Your message...' value={message} onChange={handleMessageChange} ></textarea>
