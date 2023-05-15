@@ -39,6 +39,7 @@ function Contact() {
     };
     if (!email || !message) {
       setSentError(true);
+      setIsLoading(false);
       return;
     } else {
       send(
