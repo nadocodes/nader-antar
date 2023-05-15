@@ -71,14 +71,14 @@ function Contact() {
       <form className='ContactForm' onSubmit={sendMail}>
         <div className='formField'>
           <label htmlFor='name' />
-          <input type='text' id='name' className='contactInput' name='name' placeholder='Name' value={name} onChange={handleNameChange} />
+          <input type='text' id='name' className='contactInput' name='name' placeholder='Enter Full Name' value={name} onChange={handleNameChange} />
           <label htmlFor='email' />
-          <input type='email' id='email' className='contactInput' name='email' placeholder='Email Address' value={email} onChange={handleEmailChange}/>
+          <input type='email' id='email' className='contactInput' name='email' placeholder='Enter Email Address' value={email} onChange={handleEmailChange}/>
           <label htmlFor='subject' />
-          <input type='text' id='subject' className='contactInput' name='subject' placeholder='Subject' value={subject} onChange={handleSubjectChange}/>
+          <input type='text' id='subject' className='contactInput' name='subject' placeholder='Enter Subject' value={subject} onChange={handleSubjectChange}/>
         </div>
         <label htmlFor='message'>Message: </label>
-        <textarea id='message' className='contactInput' name='message' placeholder='Your message...' value={message} onChange={handleMessageChange} ></textarea>
+        <textarea id='message' className='contactInput' name='message' placeholder='Enter Your Message!' value={message} onChange={handleMessageChange} ></textarea>
         <div className='formFeedback'>
           {sentError && <p id='warning'>Please fill out required fields</p>}
           {sent && <p id='success'>Success! Thank you for reaching out!</p>}
