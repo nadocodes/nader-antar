@@ -9,6 +9,7 @@ function Contact() {
   const [message, setMessage] = useState('');
   const [sent, setSent] = useState(false);
   const [sentError, setSentError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
@@ -27,6 +28,7 @@ function Contact() {
   }
 
   const sendMail = (e: React.FormEvent<HTMLFormElement>) => {
+    setIsLoading(true);
     e.preventDefault();
     console.log(name, email, subject, message);
     const data = {
@@ -53,9 +55,11 @@ function Contact() {
         setMessage('');
         setSent(true);
         setSentError(false);
+        setIsLoading(false);
       })
       .catch((error) => {
         console.log(error);
+        setIsLoading(false);
       }
       );
     }
@@ -79,7 +83,7 @@ function Contact() {
           {sentError && <p id='warning'>Please fill out required fields</p>}
           {sent && <p id='success'>Success! Thank you for reaching out!</p>}
         </div>
-        <input type='submit' value='Send' className='sendEmail' />
+        <input type='submit' value='Send' className='sendEmail' disabled={isLoading}/>
       </form>
       <p>Feel free to reach out to me at <a href='mailto:naderantar96@gmail.com'>NaderAntar96@gmail.com</a></p>
     </div>
