@@ -27,3 +27,12 @@
     background-color: var(--secondary-bg-color);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
+.projectCard:hover {
+    border: 3px solid var(--text-color);
+}
+
+.activeProjectCard {
+    border: 3px solid var(--text-color);
+    scale: 1.1;
+}
