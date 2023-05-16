@@ -1,5 +1,5 @@
-import React from 'react'
-import './Projects.css'
+import React from 'react';
+import './Projects.css';
 
 function Projects() {
   
@@ -8,17 +8,17 @@ function Projects() {
     // Remove activeProjectCard class from current active project
     const activeProject = document.querySelector('.activeProjectCard')
     if (activeProject) {
-      activeProject.classList.remove('activeProjectCard')
+      activeProject.classList.remove('activeProjectCard');
     }
     // Add activeProjectCard class to clicked project card
     if (e.target.classList.contains('projectCard')) {
-      e.target.classList.add('activeProjectCard')
+      e.target.classList.add('activeProjectCard');
     } else {
-      e.target.parentElement.classList.add('activeProjectCard')
+      e.target.parentElement.classList.add('activeProjectCard');
     }
     // Do nothing if clicked project card is already active
     if (e.target.parentElement.classList.contains('activeProjectCard')) {
-      return
+      return;
     }
   }
 
