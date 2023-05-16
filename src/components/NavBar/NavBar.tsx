@@ -1,5 +1,5 @@
-import React from 'react'
-import './NavBar.css'
+import React from 'react';
+import './NavBar.css';
 import LightButton from '../../assets/dark-mode.svg';
 import DarkButton from '../../assets/light-mode.svg';
 

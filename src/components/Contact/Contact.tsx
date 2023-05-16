@@ -12,22 +12,27 @@ function Contact() {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    // Set the state of name to the value of the input
     setName(e.target.value);
   }
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    // Set the state of email to the value of the input
     setEmail(e.target.value);
   }
 
   const handleSubjectChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    // Set the state of subject to the value of the input
     setSubject(e.target.value);
   }
 
   const handleMessageChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    // Set the state of message to the value of the input
     setMessage(e.target.value);
   }
 
   const sendMail = (e: React.FormEvent<HTMLFormElement>) => {
+    // Prevent the default behavior of the form
     setIsLoading(true);
     e.preventDefault();
     console.log(name, email, subject, message);
@@ -38,10 +43,12 @@ function Contact() {
       message
     };
     if (!email || !message) {
+      // Set the state of sentError to true if email or message are empty
       setSentError(true);
       setIsLoading(false);
       return;
     } else {
+      // Send the email using the send function and the data object.
       send(
         'service_lucky13sep',
         'template_mrwvdap',
@@ -50,11 +57,14 @@ function Contact() {
       )
       .then((response) => {
         console.log(response);
+        // Reset the state of all the inputs to empty strings
         setName('');
         setEmail('');
         setSubject('');
         setMessage('');
+        // Set the state of sent to true
         setSent(true);
+        // Set the state of sentError to false
         setSentError(false);
         setIsLoading(false);
       })

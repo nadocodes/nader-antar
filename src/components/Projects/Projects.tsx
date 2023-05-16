@@ -6,7 +6,7 @@ function Projects() {
   // Handle click on project card
   const handleActiveProject = (e: any) => {
     // Remove activeProjectCard class from current active project
-    const activeProject = document.querySelector('.activeProjectCard')
+    const activeProject = document.querySelector('.activeProjectCard');
     if (activeProject) {
       activeProject.classList.remove('activeProjectCard');
     }
