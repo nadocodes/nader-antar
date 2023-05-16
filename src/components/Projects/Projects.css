@@ -23,18 +23,23 @@
     width: 350px;
     height: 420px;
     margin: 20px;
+    border: 3px solid var(--secondary-bg-color);
     border-radius: 10px;
     background-color: var(--secondary-bg-color);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .projectCard:hover {
-    border: 3px solid var(--text-color);
+    border-color: var(--text-color);
 }
 
 .activeProjectCard {
-    border: 3px solid var(--text-color);
+    border-color: var(--border-color);
     scale: 1.1;
+}
+
+.activeProjectCard:hover {
+    border-color: var(--border-color);
 }
 
 @media screen and (max-width: 850px) {
