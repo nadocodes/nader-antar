@@ -39,3 +39,9 @@
   background-color: #f2f2f231;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
+@media screen and (max-width: 850px) {
+  .primaryDefault {
+    margin-bottom: 25px;
+  }
+}

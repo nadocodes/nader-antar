@@ -30,6 +30,10 @@ function Projects() {
           <h3>Project 2</h3>
           <p>Project 2 description</p>
         </div>
+        <div className='projectCard' onClick={handleActiveProject}>
+          <h3>Project 3</h3>
+          <p>Project 3 description</p>
+        </div>
       </div>
       </div>
   )
