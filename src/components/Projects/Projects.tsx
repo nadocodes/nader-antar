@@ -8,7 +8,14 @@ function Projects() {
     if (activeProject) {
       activeProject.classList.remove('activeProjectCard')
     }
-    e.target.classList.add('activeProjectCard')
+    if (e.target.classList.contains('projectCard')) {
+      e.target.classList.add('activeProjectCard')
+    } else {
+      e.target.parentElement.classList.add('activeProjectCard')
+    }
+    if (e.target.parentElement.classList.contains('activeProjectCard')) {
+      return
+    }
   }
 
   return (
