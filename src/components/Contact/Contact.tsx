@@ -12,11 +12,14 @@ function Contact() {
   const [isLoading, setIsLoading] = useState(false);
 
   const messageGenerator = () => {
+    // List of massage suggestions with name tracking if provided by the user
     const messages = [
-      `Hi Nader, my name is ${name.split(' ')[0] || '[name]'} and I came across your portfolio while searching for a front-end web developer. I'd love to set up a time to discuss potential opportunities at our company.`,
-      `Greetings Nader, I'm ${name.split(' ')[0] || '[name]'} and I am impressed with your skills as a front-end web developer. Our company is looking for someone with your expertise to join our team. Would you be interested in discussing the role further?`,
-      `Dear Nader, my name is ${name.split(' ')[0] || '[name]'} and I am the hiring manager for a front-end web developer role at our company. I came across your portfolio and I think you would be a great fit. Would you be available to talk about the role and your experience?`];
+      `Hi Nader, \n\n${name ? `My name is ${name.split(' ')[0]} and ` : ''}I came across your portfolio while searching for a front-end web developer. I'd love to set up a time to discuss potential opportunities at our company.`,
+      `Greetings Nader, \n\n${name ?`I'm ${name.split(' ')[0]} and ` : ''}I am impressed with your skills as a front-end web developer. Our company is looking for someone with your expertise to join our team. Would you be interested in discussing the role further?`,
+      `Dear Nader, \n\n${name ? `My name is ${name.split(' ')[0]} and ` : ''}I am the hiring manager for a front-end web developer role at our company. I came across your portfolio and I think you would be a great fit. Would you be available to talk about the role and your experience?`];
+    // Generate a random number between 0 and the length of the messages array to select a random message
     const randomNum = Math.floor(Math.random() * messages.length);
+    // Return the message with the name if it was provided by the user
     return messages[randomNum] + `\n\n` + `Kind regards,` + `\n` + `${name.split(' ')[0] || '[name]'}`;
   }
 
@@ -104,8 +107,8 @@ function Contact() {
           {sent && <p id='success'>Success! Thank you for reaching out!</p>}
         </div>
         <input type='submit' value='Send' className='sendEmail' disabled={isLoading}/>
-        <button className='sendEmail' onClick={() => setMessage(messageGenerator())}>Generate Message</button>
       </form>
+        <button className='sendEmail' onClick={() => setMessage(messageGenerator())}>Generate Message</button>
       <p>Feel free to reach out to me at <a href='mailto:naderantar96@gmail.com'>NaderAntar96@gmail.com</a></p>
     </div>
   )
