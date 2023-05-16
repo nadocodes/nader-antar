@@ -12,7 +12,7 @@ function Header(props: { theme: string }) {
       <div className="mainContainer">
       <div className="myInfo">
         <h1>Nader Antar</h1>
-        <h2>Web Engineer</h2>
+        <h2>Frontend Engineer</h2>
       </div>
         <Games />
         {/* <img className="ScriptSvg" src={theme == 'dark' ? ScriptSvgDark : ScriptSvgLight} alt="Script" /> */}
