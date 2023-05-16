@@ -1,20 +1,25 @@
-import React, { useState, useEffect } from 'react'
-import { AiFillHome } from 'react-icons/ai'
-import RockPaperScissors from '../../components/Games/RockPaperScissors/RockPaperScissors'
+import React, { useState } from 'react';
+import { AiFillHome } from 'react-icons/ai';
+import RockPaperScissors from '../../components/Games/RockPaperScissors/RockPaperScissors';
 import './GamesConsole.css';
 
 export default function Games() {
     const [menu, setMenu] = useState(true);
     const [game, setGame] = useState('');
 
+    // Names of games
     const gameName: string[] = ['Rock Paper Scissors', 'Memory Game'];
+
+    // Ids of each game
     const gamesId: string[] = ['RockPaperScissors', 'MemoryGame', '', '', ''];
 
+    // Set the menu to true and game to empty string
     const handleMenu = (): void => {
         setMenu(true);
         setGame('');
     }
 
+    // Set the game to the selected game and menu to false
     const handleSelectGame = (gameSelected: string): void => {
         setGame(gameSelected);
         setMenu(false);
@@ -44,7 +49,7 @@ export default function Games() {
 
                     </div>
                 </div>}
-            {game === 'RockPaperScissors' && <RockPaperScissors />}
+                {game === 'RockPaperScissors' && <RockPaperScissors />}
             </div>
             <div className="controls">
                 <button className="menuButton" onClick={handleMenu} aria-label='Return to game selection button'><AiFillHome /></button>

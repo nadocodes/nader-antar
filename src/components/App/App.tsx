@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import NavBar from '../NavBar/NavBar';
 import Header from '../Header/Header';
@@ -9,8 +10,10 @@ import './App.css';
 
 
 function App() {
+  // set theme to local storage or default to light theme
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
 
+  // toggle theme between light and dark
   const toggleTheme = (): void => {
     if (theme === 'dark') {
       setTheme('light')
@@ -19,6 +22,7 @@ function App() {
     }
   }
 
+  // set theme in local storage and set document body class to theme
   useEffect(() => {
     localStorage.setItem('theme', theme);
     document.body.className = theme;

@@ -5,6 +5,7 @@ import ScriptSvgLight from '../../assets/script-light.svg';
 import Games from '../../containers/GamesConsole/GamesConsole';
 
 function Header(props: { theme: string }) {
+  // theme prop passed from App.tsx
   const { theme } = props;
   return (
     <div className="Header primaryDefault" id='home'>
