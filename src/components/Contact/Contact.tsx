@@ -20,7 +20,7 @@ function Contact() {
     // Generate a random number between 0 and the length of the messages array to select a random message
     const randomNum = Math.floor(Math.random() * messages.length);
     // Return the message with the name if it was provided by the user
-    return messages[randomNum] + `\n\n` + `Kind regards,` + `\n` + `${name.split(' ')[0] || '[name]'}`;
+    return messages[randomNum] + `\n\n` + `Kind regards,` + `\n` + `${name.split(' ')[0] || ''}`;
   }
 
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
