@@ -13,6 +13,11 @@ export default function Games() {
     // Ids of each game
     const gamesId: string[] = ['RockPaperScissors', 'MemoryGame', '', '', ''];
 
+    // Games components list
+    const games: any = {
+        'RockPaperScissors': <RockPaperScissors />,
+    }
+    
     // Set the menu to true and game to empty string
     const handleMenu = (): void => {
         setMenu(true);
@@ -46,10 +51,10 @@ export default function Games() {
                                 }
                             })
                         }
-
                     </div>
                 </div>}
-                {game === 'RockPaperScissors' && <RockPaperScissors />}
+                {/* Display the selected game */}
+                {games[game]}
             </div>
             <div className="controls">
                 <button className="menuButton" onClick={handleMenu} aria-label='Return to game selection button'><AiFillHome /></button>
