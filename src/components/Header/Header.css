@@ -37,4 +37,7 @@
         flex-direction: column;
         gap: 70px;
     }
+    .myInfo {
+        text-align: center;
+    }
 }
