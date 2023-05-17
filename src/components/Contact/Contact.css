@@ -78,7 +78,7 @@
 #message {
     width: 95%;
     height: 100%;
-    resize: both;
+    resize: none;
     border: 2px solid var(--border-color);
     border-radius: 5px;
     background-color: var(--primary-bg-color);
