@@ -55,7 +55,7 @@ function Contact() {
       message
     };
     if (!name || !email || !message) {
-      // Set the state of sentError to true if email or message are empty
+      // Set the state of sentError to true if email or message or name are empty
       setSentError(true);
       setIsLoading(false);
       return;
