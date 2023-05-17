@@ -12,6 +12,7 @@ function Header(props: { theme: string }) {
       <div className="mainContainer">
       <div className="myInfo">
         <h1>Nader Antar</h1>
+        {/* todo: loop through variations of Frontend, Front-end, Front End */}
         <h2>Frontend Engineer</h2>
       </div>
         <Games />
