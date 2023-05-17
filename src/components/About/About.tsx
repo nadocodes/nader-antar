@@ -5,7 +5,6 @@ import { FaHtml5,
     FaPython,
     FaReact,
     FaNodeJs,
-    FaDatabase,
     FaGitAlt,
     FaGithub,
     FaFigma } from 'react-icons/fa';
@@ -17,7 +16,7 @@ import { SiJquery,
 import './About.css';
 
 function About() {
-    const skills = ['html5', 'css3', 'JavaScript', 'python', 'react', 'redux', 'typeScript', 'jquery', 'node.js', 'MongoDB', 'GitHub', 'git', 'netlify', 'figma', 'Adobe Creative Suite'];
+    const skills = ['html5', 'css3', 'JavaScript', 'python', 'react', 'redux', 'typeScript', 'jquery', 'node.js', 'GitHub', 'git', 'netlify', 'figma', 'Adobe Creative Suite'];
     
     const skillIcons: any = {
         'html5': FaHtml5,
@@ -29,7 +28,6 @@ function About() {
         'redux': SiRedux,
         'typeScript': SiTypescript,
         'node.js': FaNodeJs,
-        'MongoDB': FaDatabase,
         'git': FaGitAlt,
         'GitHub': FaGithub,
         'netlify': SiNetlify,
