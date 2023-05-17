@@ -9,7 +9,7 @@ type RPSActionButtonProps = {
 
 const RPSActionButton = ({action = 'rock', onActionSelected}: RPSActionButtonProps) => {
   return (
-    <button className='rounded-btn' onClick={() => onActionSelected(action)} >
+    <button className='rps-choice-btn' onClick={() => onActionSelected(action)} >
         <RPSActionIcon action={action} size={20} />
     </button>
   )

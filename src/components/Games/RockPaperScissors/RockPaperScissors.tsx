@@ -54,9 +54,9 @@ function RockPaperScissors(): JSX.Element {
 
   return (
     <div className="RockPaperScissors">
-      <h3 className="gameTitle">Rock Paper Scissors</h3>
+      <h3 className="RPS">Rock Paper Scissors</h3>
       <div>
-        <div className='container'>
+        <div className='rps-billboard'>
             <RPSPlayer name='Player' score={playerScore} action={playerAction} />
             <RPSPlayer name='Computer' score={computerScore} action={computerAction} />
         </div>

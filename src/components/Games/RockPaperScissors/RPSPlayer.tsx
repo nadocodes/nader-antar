@@ -9,9 +9,9 @@ interface RPSPlayerProps {
 
 const RPSPlayer: React.FC<RPSPlayerProps> = ({name = 'Player', score = 0, action="rock"}) => {
   return (
-    <div className='player'>
-      <div className="score">{`${name}: ${score}`}</div>
-      <div className='action'>
+    <div className='rps-player'>
+      <div className="rps-score">{`${name}: ${score}`}</div>
+      <div className='rps-choice-display'>
         {action && <RPSActionIcon action={action} size={60} />}
       </div>
     </div>

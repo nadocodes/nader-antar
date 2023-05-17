@@ -8,13 +8,13 @@
   place-items: center;
 }
 
-.container {
+.rps-billboard {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.player {
+.rps-player {
   margin: 10px;
   width: 120px;
   height: 120px;
@@ -28,13 +28,13 @@
   color: #ffffff;
 }
 
-.score {
+.rps-score {
   padding: 1px;
   font-size: small;
   font-weight: bold;
 }
 
-.action {
+.rps-choice-display {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -42,7 +42,7 @@
   color: #ffffff;
 }
 
-.rounded-btn {
+.rps-choice-btn {
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -51,15 +51,15 @@
   margin: 2px;
   background-color: #242424;
   color: #ffffff;
-  border: 1px solid  #6C63FF;
+  border: 1px solid var(--border-color);
 }
 
-.rounded-btn:hover {
+.rps-choice-btn:hover {
   color:  #6C63FF;
-  border: 1px solid  #6C63FF;
+  scale: 1.1;
 }
 
-.gameTitle {
+.RPS {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0;
