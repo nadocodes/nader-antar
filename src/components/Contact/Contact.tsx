@@ -96,22 +96,23 @@ function Contact() {
           <label htmlFor='name' />
           <input type='text' id='name' className='contactInput' name='name' placeholder='Name' value={name} onChange={handleNameChange} />
           <label htmlFor='email' />
-          <input type='email' id='email' className='contactInput' name='email' placeholder='Email Address' value={email} onChange={handleEmailChange}/>
+          <input type='email' id='email' className='contactInput' name='email' placeholder='Email Address*' value={email} onChange={handleEmailChange}/>
           <label htmlFor='subject' />
           <input type='text' id='subject' className='contactInput' name='subject' placeholder='Subject' value={subject} onChange={handleSubjectChange}/>
         </div>
         <div className='formMessage'>
           <label htmlFor='message' />
-          <textarea id='message' className='contactInput' name='message' placeholder='Message' value={message} onChange={handleMessageChange} ></textarea>
+          <textarea id='message' className='contactInput' name='message' placeholder='Message*' value={message} onChange={handleMessageChange} ></textarea>
+        </div>
+        <div className='submitRow'>
+          <button className='sendEmail' onClick={(e) => { e.preventDefault(); setMessage(messageGenerator())}}>Generate</button>
+          <input type='submit' value='Send' className='sendEmail' disabled={isLoading}/>
         </div>
         <div className='formFeedback'>
           {sentError && <p id='warning'>Please fill out required fields</p>}
           {sent && <p id='success'>Success! Thank you for reaching out!</p>}
         </div>
-        
-        <input type='submit' value='Send' className='sendEmail' disabled={isLoading}/>
       </form>
-        <button className='sendEmail' onClick={() => setMessage(messageGenerator())}>Generate Message</button>
       <p>Feel free to reach out to me at <a href='mailto:naderantar96@gmail.com'>NaderAntar96@gmail.com</a></p>
     </div>
   )
