@@ -11,7 +11,7 @@
 }
 
 .dark {
-  --primary-bg-color: #242424;
+  --primary-bg-color: #161616;
   --secondary-bg-color: #6C41EC;
   --text-color: #FFFFFF;
   --border-color: #161616;
@@ -22,10 +22,10 @@
 .light {
   --primary-bg-color: #845CF5;
   --secondary-bg-color: #FFFFFF;
-  --text-color: #242424;
-  --border-color: #010C3F;
+  --text-color: #161616;
+  --border-color: #161616;
   --link-color: #FFFFFF;
-  --link-hover-color: #242424;
+  --link-hover-color: #161616;
 }
 
 .primaryDefault {
@@ -36,7 +36,7 @@
 .secondaryDefault {
   min-height: 60vh;
   min-width: 100vw;
-  background-color: #f2f2f231;
+  /* background-color: #f2f2f231; */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
