@@ -27,15 +27,18 @@ function Projects() {
       <h2 className="projectsTitle">Projects</h2>
       <div className='projectsContainer'>
         <div className='projectCard' onClick={handleActiveProject}>
-          <h3>Project 1</h3>
+          <img src='https://img.freepik.com/premium-photo/default-wallpaper-abstract-background-trendy-futuristic-wave-minimalistic-3d-layout-design_477306-800.jpg' alt='Project 1' className='projectCardImg' />
+          <h4>PushPlayListen</h4>
           <p>Project 1 description</p>
         </div>
         <div className='projectCard activeProjectCard' onClick={handleActiveProject}>
-          <h3>Project 2</h3>
+          <img src='https://img.freepik.com/premium-photo/default-wallpaper-abstract-background-trendy-futuristic-wave-minimalistic-3d-layout-design_477306-800.jpg' alt='Project 2' className='projectCardImg' />
+          <h4>Portfolio 2023</h4>
           <p>Project 2 description</p>
         </div>
         <div className='projectCard' onClick={handleActiveProject}>
-          <h3>Project 3</h3>
+          <img src='https://img.freepik.com/premium-photo/default-wallpaper-abstract-background-trendy-futuristic-wave-minimalistic-3d-layout-design_477306-800.jpg' alt='Project 3' className='projectCardImg' />
+          <h4>Extra Space</h4>
           <p>Project 3 description</p>
         </div>
       </div>
