@@ -23,9 +23,9 @@
     width: 350px;
     height: 450px;
     margin: 20px;
-    border: 3px solid var(--secondary-bg-color);
+    border: 3px solid var(--primary-bg-color);
     border-radius: 10px;
-    background-color: var(--secondary-bg-color);
+    background-color: var(--primary-bg-color);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -35,21 +35,19 @@
 
 .activeProjectCard {
     box-shadow: 0.35rem 0.5rem 7px rgba(0, 0, 0, 0.6);
-    border-color: var(--border-color);
+    border-color: var(--secondary-bg-color);
     scale: 1.15;
 }
 
 .activeProjectCard:hover {
-    border-color: var(--border-color);
+    border-color: var(--secondary-bg-color);
 }
 
 .projectCardImg {
     width: 335px;
     height: 308px;
-    border: 2px solid var(--border-color);
     border-radius: 10px;
     margin: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 @media screen and (max-width: 768px) {
