@@ -29,7 +29,7 @@ function App() {
   }, [theme]);
 
   return (
-    <div className={`App ${theme}`}>
+    <div className='App'>
       <NavBar theme={theme} toggleTheme={toggleTheme} />
       <Header theme={theme} />
       <About />

@@ -57,6 +57,7 @@ function Contact() {
     if (!name || !email || !message) {
       // Set the state of sentError to true if email or message or name are empty
       setSentError(true);
+      setSent(false);
       setIsLoading(false);
       return;
     } else {
@@ -109,7 +110,7 @@ function Contact() {
           <input type='submit' value='Send' className='sendEmail' disabled={isLoading}/>
         </div>
         <div className='formFeedback'>
-          {sentError && <p id='warning'>Please fill out required fields</p>}
+          {sentError && <p id='warning'>*Please fill out all required fields</p>}
           {sent && <p id='success'>Success! Thank you for reaching out!</p>}
         </div>
       </form>
