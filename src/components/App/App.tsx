@@ -11,7 +11,7 @@ import './App.css';
 
 function App() {
   // set theme to local storage or default to light theme
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
 
   // toggle theme between light and dark
   const toggleTheme = (): void => {

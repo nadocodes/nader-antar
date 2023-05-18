@@ -10,14 +10,17 @@ nav {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
-nav a {
+nav li:hover {
+    scale: 1.1;
+}
+
+.navLinks {
     text-decoration: none;
     color: var(--text-color);
 }
 
-nav a:hover {
+.navLinks:hover {
     color: var(--primary-bg-color);
-    scale: 1.5;
 }
 
 nav ul {
@@ -30,17 +33,17 @@ nav ul {
     margin-left: 20px;
 }
 
-.ThemeButton {
+.themeButton {
     border: none;
     background-color: transparent;
     cursor: pointer;
     margin: 10px;
 }
 
-.ThemeButton img {
+.themeButton img {
     width: 25px
 }
 
-.ThemeButton:hover {
+.themeButton:hover {
     scale: 1.3;
 }
