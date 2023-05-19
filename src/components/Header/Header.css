@@ -12,6 +12,22 @@
     line-height: 1;
 }
 
+.myInfoMission {
+    font-size: large;
+    text-align: right;
+    line-height: 2;
+}
+
+.getInTouch {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--primary-bg-color);
+    text-decoration: none;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5);
+    margin: 5px;
+    border: 2px solid var(--border-color);
+}
+
 .mainContainer {
     display: flex;
     flex-direction: row;

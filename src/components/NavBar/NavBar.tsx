@@ -3,21 +3,10 @@ import './NavBar.css';
 import LightButton from '../../assets/dark-mode.svg';
 import DarkButton from '../../assets/light-mode.svg';
 
-function NavBar(props: { toggleTheme: () => void } & { theme: string }){
-  const { toggleTheme, theme } = props;
+function NavBar(props: { toggleTheme: () => void } & { theme: string } & { handleScroll: (e: any) => void }){
+  const { toggleTheme, theme, handleScroll } = props;
 
-  const handleScroll = (e: any) => {
-    e.preventDefault();
-    const target = e.target.getAttribute('href');
-    const location = document.querySelector(target)?.getBoundingClientRect().top;
-    const offset = window.pageYOffset;
-    const gap = 50;
-    const offsetPosition = location ? location + offset - gap : 0;
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: 'smooth'
-    });
-  }
+  
 
   return (
     <div>

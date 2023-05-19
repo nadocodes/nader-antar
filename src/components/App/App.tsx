@@ -22,6 +22,19 @@ function App() {
     }
   }
 
+  const handleScroll = (e: any) => {
+    e.preventDefault();
+    const target = e.target.getAttribute('href');
+    const location = document.querySelector(target)?.getBoundingClientRect().top;
+    const offset = window.pageYOffset;
+    const gap = 50;
+    const offsetPosition = location ? location + offset - gap : 0;
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  }
+
   // set theme in local storage and set document body class to theme
   useEffect(() => {
     localStorage.setItem('theme', theme);
@@ -30,8 +43,8 @@ function App() {
 
   return (
     <div className='App'>
-      <NavBar theme={theme} toggleTheme={toggleTheme} />
-      <Header theme={theme} />
+      <NavBar theme={theme} toggleTheme={toggleTheme} handleScroll={handleScroll}/>
+      <Header theme={theme} handleScroll={handleScroll}/>
       <About />
       <Projects />
       <Contact />
