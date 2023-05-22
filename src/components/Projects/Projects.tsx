@@ -1,7 +1,7 @@
 import React from 'react';
 import { GoRepo } from 'react-icons/go';
 import { FaExternalLinkAlt } from 'react-icons/fa';
-import PushPlayListen from '../../assets/pushplaylistenScreenshot.jpeg';
+import PushPlayListen from '../../assets/pushplaylistenScreenshot.png';
 import './Projects.css';
 
 function Projects() {

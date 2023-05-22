@@ -28,6 +28,10 @@
     border: 2px solid var(--border-color);
 }
 
+.getInTouch:active {
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.9);
+}
+
 .mainContainer {
     display: flex;
     flex-direction: row;
