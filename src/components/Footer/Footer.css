@@ -6,6 +6,7 @@
     align-items: center;
     width: 100vw;
     height: 20vh;
+    background-image: linear-gradient(to right, var(--primary-bg-color), var(--secondary-bg-color) 210%);
 }
 
 .footerLinks {

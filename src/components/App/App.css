@@ -37,18 +37,21 @@ p, b {
   --contact-input-bg-color: #FFFFFF;
   --contact-text-color: #161616;
   --contact-border-color: #161616;
+  --light-transparent-bg: #f2f2f231;
 }
 
 .primaryDefault {
   min-height: 100vh;
   min-width: 100vw;
+  background-image: linear-gradient(to right, var(--primary-bg-color), var(--secondary-bg-color) 210%);
 }
 
 .secondaryDefault {
   min-height: 60vh;
   min-width: 100vw;
-  /* background-color: #f2f2f231; */
+  background-color: var(--light-transparent-bg);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 @media screen and (max-width: 850px) {
