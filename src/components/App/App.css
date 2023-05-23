@@ -10,6 +10,10 @@
   color: var(--text-color);
 }
 
+p, b {
+  opacity: 0.8;
+}
+
 .dark {
   --primary-bg-color: #161616;
   --secondary-bg-color: #6C41EC;
@@ -17,6 +21,9 @@
   --border-color: #242424;
   --link-color: #6C41EC;
   --link-hover-color: #FFFFFF;
+  --contact-bg-color: #6C41EC;
+  --contact-input-bg-color: #161616;
+  --contact-text-color: #FFFFFF;
 }
 
 .light {
@@ -26,6 +33,10 @@
   --border-color: #161616;
   --link-color: #FFFFFF;
   --link-hover-color: #161616;
+  --contact-bg-color: #845CF5;
+  --contact-input-bg-color: #FFFFFF;
+  --contact-text-color: #161616;
+  --contact-border-color: #161616;
 }
 
 .primaryDefault {

@@ -14,7 +14,7 @@
     width: 500px;
     margin: auto;
     padding: 20px;
-    background-color: var(--secondary-bg-color);
+    background-color: var(--contact-bg-color);
     border: 3px solid var(--border-color);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -47,14 +47,14 @@
 .contactInput {
     border: 2px solid var(--border-color);
     border-radius: 5px;
-    background-color: var(--primary-bg-color);
-    color: var(--text-color);
+    background-color: var(--contact-input-bg-color);
+    color: var(--contact-text-color);
     font-family: var(--font-family);
     padding: 5px;
 }
 
 .contactInput::placeholder {
-    color: var(--text-color);
+    color: var(--contact-text-color);
     opacity: 0.7; /* Firefox */
 }
 
@@ -94,8 +94,6 @@
     resize: none;
     border: 2px solid var(--border-color);
     border-radius: 5px;
-    background-color: var(--primary-bg-color);
-    color: var(--text-color);
     padding: 5px;
 }
 

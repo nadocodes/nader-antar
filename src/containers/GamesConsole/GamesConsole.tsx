@@ -48,7 +48,7 @@ export default function Games() {
         <div className='gamesContainer'>
             <div className='gamesConsole'>
                 {menu && <div className="menu">
-                    <h3 className="menuTitle">Mini Games</h3>
+                    <h3 className="menuTitle">Apps</h3>
                     <div className="games">
                         {gameSelectionButtons}
                     </div>
