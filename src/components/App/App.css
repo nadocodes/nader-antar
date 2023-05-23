@@ -6,7 +6,7 @@
 .App {
   display: flex;
   flex-direction: column;
-  background-color: var(--primary-bg-color);
+  background-image: linear-gradient(to right, var(--primary-bg-color), var(--secondary-bg-color) 210%);
   color: var(--text-color);
 }
 
@@ -24,6 +24,7 @@ p, b {
   --contact-bg-color: #6C41EC;
   --contact-input-bg-color: #161616;
   --contact-text-color: #FFFFFF;
+  --transparent-bg: #161616;
 }
 
 .light {
@@ -37,7 +38,7 @@ p, b {
   --contact-input-bg-color: #FFFFFF;
   --contact-text-color: #161616;
   --contact-border-color: #161616;
-  --light-transparent-bg: #f2f2f231;
+  --transparent-bg: #f2f2f231;
 }
 
 .primaryDefault {
@@ -49,7 +50,7 @@ p, b {
 .secondaryDefault {
   min-height: 60vh;
   min-width: 100vw;
-  background-color: var(--light-transparent-bg);
+  background-color: var(--transparent-bg);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 1;
 }

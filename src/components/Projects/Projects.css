@@ -32,9 +32,12 @@
 
 .projectCard:hover {
     border-color: var(--text-color);
+    box-shadow: 0.35rem 0.5rem 7px rgba(0, 0, 0, 0.6);
+    border-color: var(--secondary-bg-color);
+    scale: 1.15;
 }
 
-.activeProjectCard {
+/* .activeProjectCard {
     box-shadow: 0.35rem 0.5rem 7px rgba(0, 0, 0, 0.6);
     border-color: var(--secondary-bg-color);
     scale: 1.15;
@@ -42,7 +45,7 @@
 
 .activeProjectCard:hover {
     border-color: var(--secondary-bg-color);
-}
+} */
 
 .projectCardImg {
     width: 335px;
