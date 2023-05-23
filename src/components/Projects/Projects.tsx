@@ -54,6 +54,15 @@ function Projects() {
             <a className='projectDemoBtn projectLink' href='https://pushplaylisten.netlify.app/' target='_blank' >Live View <FaExternalLinkAlt/></a>
           </div>
         </div>
+        <div className='projectCard'>
+          <img src='https://img.freepik.com/premium-photo/default-wallpaper-abstract-background-trendy-futuristic-wave-minimalistic-3d-layout-design_477306-800.jpg' alt='Project 3' className='projectCardImg' />
+          <h4>Extra Space</h4>
+          <p>Project 3 description</p>
+          <div className='projectButtons'>
+            <a className='projectCodeBtn projectLink' href='https://pushplaylisten.netlify.app' target='_blank'  ><GoRepo/></a>
+            <a className='projectDemoBtn projectLink' href='https://pushplaylisten.netlify.app/' target='_blank' >Live View <FaExternalLinkAlt/></a>
+          </div>
+        </div>
       </div>
     </div>
   )

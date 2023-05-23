@@ -12,7 +12,7 @@
     justify-content: space-evenly;
     width: 100%;
     height: 100%;
-    margin: auto;
+    margin: 25px auto;
 }
 
 .projectCard {
@@ -20,10 +20,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 350px;
-    height: 450px;
+    width: 375px;
+    height: 485px;
     margin: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
     border: 2px solid var(--transparent-bg);
     border-radius: 10px;
     background-color: var(--transparent-bg);
@@ -34,7 +34,7 @@
 .projectCard:hover {
     box-shadow: 0.35rem 0.5rem 7px rgba(0, 0, 0, 0.6);
     border-color: var(--secondary-bg-color);
-    scale: 1.15;
+    scale: 1.2;
 }
 
 /* .activeProjectCard {
@@ -53,6 +53,7 @@
     border-radius: 10px;
     margin: 10px;
     object-fit: cover;
+    border-bottom: 2px solid var(--border-color);
 }
 
 .projectButtons {
@@ -86,11 +87,14 @@
 
 @media screen and (max-width: 768px) {
     .projectCard {
-        max-width: 300px;
-        max-height: 400px;
+        max-width: 200px;
+        max-height: 300px;
+    }
+    .projectCard p {
+        display: none;
     }
     .projectCardImg {
-        max-width: 285px;
-        max-height: 258px;
+        max-width: 95%;
+        max-height: 85%;
     }
 }
