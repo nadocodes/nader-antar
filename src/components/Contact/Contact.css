@@ -14,7 +14,7 @@
     width: 500px;
     margin: auto;
     padding: 20px;
-    background-color: var(--transparent-bg);
+    background-color: var(--contact-bg-color);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     gap: 10px;

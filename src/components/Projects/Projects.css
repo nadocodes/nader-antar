@@ -87,8 +87,9 @@
 
 @media screen and (max-width: 768px) {
     .projectCard {
-        max-width: 200px;
-        max-height: 300px;
+        max-width: 250px;
+        max-height: 320px;
+        margin: 15px;
     }
     .projectCard p {
         display: none;
