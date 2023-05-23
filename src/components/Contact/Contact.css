@@ -14,8 +14,7 @@
     width: 500px;
     margin: auto;
     padding: 20px;
-    background-color: var(--contact-bg-color);
-    border: 3px solid var(--border-color);
+    background-color: var(--transparent-bg);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     gap: 10px;
@@ -33,11 +32,12 @@
 }
 
 .sendEmail:active {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 .sendEmail:hover {
     cursor: pointer;
+    color: var(--link-color);
 }
 
 .formFeedback {
@@ -107,7 +107,8 @@
 
 @media screen and (max-width: 768px) {
     .ContactForm {
-        width: 85%;
+        width: 75%;
+        height: 300px;
     }
     #name, #email {
         width: 40%;

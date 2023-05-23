@@ -10,7 +10,6 @@
 .myInfo {
     text-align: left;
     line-height: 1;
-    margin-top: 60px;
 }
 
 .myInfoMission {
@@ -60,5 +59,11 @@
     }
     .myInfo {
         text-align: center;
+    }
+}
+
+@media screen and (orientation:landscape) and (max-width: 1400px) {
+    .myInfo {
+        margin-top: 50px;
     }
 }

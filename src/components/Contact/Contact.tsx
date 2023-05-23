@@ -105,13 +105,13 @@ function Contact() {
           <label htmlFor='message' />
           <textarea id='message' className='contactInput' name='message' placeholder='*Message' value={message} onChange={handleMessageChange} ></textarea>
         </div>
-        <div className='submitRow'>
-          <button className='sendEmail' onClick={(e) => { e.preventDefault(); setMessage(messageGenerator())}}>Generate</button>
-          <input type='submit' value='Send' className='sendEmail' disabled={isLoading}/>
-        </div>
         <div className='formFeedback'>
           {sentError && <p id='warning'>*Please fill out all required fields</p>}
           {sent && <p id='success'>Success! Thank you for reaching out!</p>}
+        </div>
+        <div className='submitRow'>
+          <button className='sendEmail' onClick={(e) => { e.preventDefault(); setMessage(messageGenerator())}}>Generate</button>
+          <input type='submit' value='Send' className='sendEmail' disabled={isLoading}/>
         </div>
       </form>
       <p>Feel free to reach out to me at <a href='mailto:naderantar96@gmail.com'>NaderAntar96@gmail.com</a></p>

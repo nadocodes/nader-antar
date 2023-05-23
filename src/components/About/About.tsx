@@ -39,7 +39,7 @@ function About() {
         <div className='About secondaryDefault' id='about'>
             <div className='aboutContainer'>
                 <h2>Hello, World!</h2>
-                <p>I am a <em>front-end engineer</em> with a passion for coding and a knack for cracking algorithms. When I'm not busy untangling complex code, you'll find me dreaming up my next tech adventure. Driven by curiosity, I'm constantly learning and evolving to ensure my digital creations are as amazing as they are functional. Let's ignite the magic of code together and find happiness coding! <br/>🚀💻🌟</p>
+                <b>I am a <em>front-end engineer</em> with a passion for coding and a knack for cracking algorithms. When I'm not busy untangling complex code, you'd find me exploring the earth, photographing moments or simply meditating. I'm constantly learning to evolve my digital creations. I'm in search of a team that appreciates growth and praises potential. <br/>🚀💻🌟</b>
                 <div className='skillsContainer'>
                     <h3>Stack</h3>
                     <div className='skills'>

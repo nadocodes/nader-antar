@@ -24,15 +24,14 @@
     height: 450px;
     margin: 20px;
     margin-bottom: 50px;
-    border: 3px solid var(--primary-bg-color);
+    border: 2px solid var(--transparent-bg);
     border-radius: 10px;
-    background-color: var(--primary-bg-color);
+    background-color: var(--transparent-bg);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transition: scale 0.15s ease-in-out;
 }
 
 .projectCard:hover {
-    border-color: var(--text-color);
     box-shadow: 0.35rem 0.5rem 7px rgba(0, 0, 0, 0.6);
     border-color: var(--secondary-bg-color);
     scale: 1.15;
