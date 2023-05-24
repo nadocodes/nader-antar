@@ -45,4 +45,4 @@
 | Light Green    | ![#11f51c](https://via.placeholder.com/10/11f51c?text=+) `#11f51c` |
 | Dark Green     | ![#279242](https://via.placeholder.com/10/279242?text=+) `#279242` |
 | Light Orange   | ![#fc9c2f](https://via.placeholder.com/10/fc9c2f?text=+) `#fc9c2f` |
-| Dark Odange    | ![#fd6602](https://via.placeholder.com/10/fd6602?text=+) `#fd6602` |
+| Dark Orange    | ![#fd6602](https://via.placeholder.com/10/fd6602?text=+) `#fd6602` |
