@@ -2,10 +2,10 @@
   <img src="./public/vite.svg"/>
 </p>
 <h1 align="center">
-  nadocodes.netlify.app - v1
+  nadocodes.dev - v1
 </h1>
 <p align="center">
-  <a href="" target="_blank">nadocodes.netlify.app</a> built with React.js leveraging TypeScript.
+  <a href="nadocodes.dev" target="_blank">nadocodes.dev</a> built with React.js leveraging TypeScript.
 </p>
 
 <img width="1306" alt="Screen Shot 2021-03-15 at 8 29 18 PM" src="./src/assets/portfolio2023Screenshot.jpg">
