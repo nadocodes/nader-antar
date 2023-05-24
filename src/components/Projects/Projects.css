@@ -37,6 +37,10 @@
     scale: 1.2;
 }
 
+.projectCard p {
+    width: 95%;
+}
+
 /* .activeProjectCard {
     box-shadow: 0.35rem 0.5rem 7px rgba(0, 0, 0, 0.6);
     border-color: var(--secondary-bg-color);

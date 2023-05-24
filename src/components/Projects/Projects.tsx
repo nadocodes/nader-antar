@@ -3,6 +3,8 @@ import { GoRepo } from 'react-icons/go';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import PushPlayListen from '../../assets/pushplaylistenScreenshot.png';
 import Portfolio2023 from '../../assets/portfolio2023Screenshot.jpg';
+import WatchDogsFanPage from '../../assets/watchdogsFanPageScreenshot.jpg';
+import UnderConstruction from '../../assets/undrawUnderConstruction.svg';
 import './Projects.css';
 
 function Projects() {
@@ -29,16 +31,7 @@ function Projects() {
       <h2 className="projectsTitle">Personal Projects</h2>
       <div className='projectsContainer'>
         <div className='projectCard'>
-          <img src={PushPlayListen} alt='Project 1' className='projectCardImg' />
-          <h4>PushPlayListen</h4>
-          <p>A responsive playlist app uses authentication Spotify's Api.</p>
-          <div className='projectButtons'>
-            <a className='projectCodeBtn projectLink' href='https://github.com/nadocodes/pushplaylisten-react-app.git' target='_blank'  ><GoRepo/></a>
-            <a className='projectDemoBtn projectLink' href='https://pushplaylisten.netlify.app/' target='_blank' >Live View <FaExternalLinkAlt/></a>
-          </div>
-        </div>
-        <div className='projectCard activeProjectCard'>
-          <img src={Portfolio2023} alt='Project 2' className='projectCardImg' />
+          <img src={Portfolio2023} alt='Portfolio 2023 Project Image' className='projectCardImg' />
           <h4>Portfolio 2023</h4>
           <p>Portfolio coded from scratch to showcase personal profile.</p>
           <div className='projectButtons'>
@@ -46,21 +39,30 @@ function Projects() {
           </div>
         </div>
         <div className='projectCard'>
-          <img src='https://img.freepik.com/premium-photo/default-wallpaper-abstract-background-trendy-futuristic-wave-minimalistic-3d-layout-design_477306-800.jpg' alt='Project 3' className='projectCardImg' />
-          <h4>Extra Space</h4>
-          <p>Project 3 description</p>
+          <img src={PushPlayListen} alt='PushPlayListen Project Image' className='projectCardImg' />
+          <h4>PushPlayListen</h4>
+          <p>A responsive playlist app uses authentication Spotify's Api.</p>
           <div className='projectButtons'>
-            <a className='projectCodeBtn projectLink' href='https://pushplaylisten.netlify.app' target='_blank'  ><GoRepo/></a>
+            <a className='projectCodeBtn projectLink' href='https://github.com/nadocodes/pushplaylisten-react-app.git' target='_blank'  ><GoRepo/></a>
             <a className='projectDemoBtn projectLink' href='https://pushplaylisten.netlify.app/' target='_blank' >Live View <FaExternalLinkAlt/></a>
           </div>
         </div>
         <div className='projectCard'>
-          <img src='https://img.freepik.com/premium-photo/default-wallpaper-abstract-background-trendy-futuristic-wave-minimalistic-3d-layout-design_477306-800.jpg' alt='Project 3' className='projectCardImg' />
-          <h4>Extra Space</h4>
-          <p>Project 3 description</p>
+          <img src={WatchDogsFanPage} alt='Watchdogs 2 Fan Page Project Image' className='projectCardImg' />
+          <h4>Watchdogs 2 Fanpage</h4>
+          <p>A video game fan page produced as challenge to evolve technical skill set.</p>
           <div className='projectButtons'>
-            <a className='projectCodeBtn projectLink' href='https://pushplaylisten.netlify.app' target='_blank'  ><GoRepo/></a>
-            <a className='projectDemoBtn projectLink' href='https://pushplaylisten.netlify.app/' target='_blank' >Live View <FaExternalLinkAlt/></a>
+            <a className='projectCodeBtn projectLink' href='https://github.com/nadocodes/watchdogs2-fanpage.git' target='_blank'  ><GoRepo/></a>
+            <a className='projectDemoBtn projectLink' href='https://nadocodes.github.io/watchdogs2-fanpage/' target='_blank' >Live View <FaExternalLinkAlt/></a>
+          </div>
+        </div>
+        <div className='projectCard'>
+          <img src={UnderConstruction} alt='Social Discussion App under construction' className='projectCardImg' />
+          <h4>Social Discussion App</h4>
+          <p>A Reddit style application that allows users to socially interact with posts. <br/> <span id='warning'>*Under Construction</span></p>
+          <div className='projectButtons'>
+            <a className='projectDemoBtn projectLink' href='https://github.com/nadocodes/' target='_blank'  ><GoRepo/></a>
+            {/* <a className='projectDemoBtn projectLink' href='https://pushplaylisten.netlify.app/' target='_blank' >Live View <FaExternalLinkAlt/></a> */}
           </div>
         </div>
       </div>
