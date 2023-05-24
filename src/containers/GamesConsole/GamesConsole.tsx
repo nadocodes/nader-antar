@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { AiFillHome } from 'react-icons/ai';
 import RockPaperScissors from '../../components/Games/RockPaperScissors/RockPaperScissors';
+import MemoryGame from '../../components/Games/MemoryGame/MemoryGame';
 import './GamesConsole.css';
 
 export default function Games() {
@@ -17,7 +18,7 @@ export default function Games() {
             name: 'Rock Paper Scissors'
         },
         'MemoryGame': {
-            comp: <div>Memory Game</div>,
+            comp: <MemoryGame />,
             name: 'Memory Game'
         }       
     }
