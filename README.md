@@ -5,7 +5,7 @@
   nadocodes.dev - v1
 </h1>
 <p align="center">
-  <a href="nadocodes.dev" target="_blank">nadocodes.dev</a> built with React.js leveraging TypeScript.
+  <a href="https://nadocodes.dev" target="_blank">nadocodes.dev</a> built with React.js leveraging TypeScript.
 </p>
 
 <img width="1306" alt="Screen Shot 2021-03-15 at 8 29 18 PM" src="./src/assets/portfolio2023Screenshot.jpg">
