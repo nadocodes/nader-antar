@@ -20,24 +20,28 @@
     gap: 10px;
 }
 
-.sendEmail {
+.contactBtn {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-evenly;
     margin: 5px auto;
+    width: 100px;
+    color: var(--link-color);
+    font-weight: bold;
     padding: 10px;
     border: 2px solid var(--border-color);
     border-radius: 10px;
     background-color: var(--primary-bg-color);
 }
 
-.sendEmail:active {
+.contactBtn:active {
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
-.sendEmail:hover {
+.contactBtn:hover {
     cursor: pointer;
-    color: var(--link-color);
+    color: var(--link-hover-color);
 }
 
 .formFeedback {

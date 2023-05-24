@@ -6,7 +6,7 @@
 .App {
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(to right, var(--primary-bg-color), var(--secondary-bg-color) 210%);
+  background: var(--bg-gradient);
   color: var(--text-color);
 }
 
@@ -17,10 +17,11 @@ p, b {
 .dark {
   --primary-bg-color: #161616;
   --secondary-bg-color: #6C41EC;
+  --bg-gradient: linear-gradient(to right, var(--primary-bg-color), var(--secondary-bg-color) 210%);
   --text-color: #FFFFFF;
   --border-color: #242424;
-  --link-color: #6C41EC;
-  --link-hover-color: #FFFFFF;
+  --link-hover-color: #6C41EC;
+  --link-color: #FFFFFF;
   --contact-bg-color: #6C41EC;
   --contact-input-bg-color: #161616;
   --contact-text-color: #FFFFFF;
@@ -32,6 +33,7 @@ p, b {
 .light {
   --primary-bg-color: #845CF5;
   --secondary-bg-color: #FFFFFF;
+  --bg-gradient: linear-gradient(to right, var(--primary-bg-color), var(--secondary-bg-color) 210%);
   --text-color: #161616;
   --border-color: #161616;
   --link-color: #FFFFFF;
@@ -48,7 +50,7 @@ p, b {
 .primaryDefault {
   min-height: 100vh;
   min-width: 100vw;
-  background-image: linear-gradient(to right, var(--primary-bg-color), var(--secondary-bg-color) 210%);
+  background: var(--bg-gradient);
 }
 
 .secondaryDefault {

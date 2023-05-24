@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { send } from 'emailjs-com';
+import { BsFillSendFill, BsFillSendExclamationFill, BsFillSendCheckFill, BsFillSendSlashFill } from 'react-icons/bs';
 import './Contact.css';
 
 function Contact() {
@@ -95,23 +96,28 @@ function Contact() {
       <form className='ContactForm' onSubmit={sendMail}>
         <div className='formField'>
           <label htmlFor='name' />
-          <input type='text' id='name' className='contactInput' name='name' placeholder='*Name' value={name} onChange={handleNameChange} required/>
+          <input type='text' id='name' className='contactInput' name='name' placeholder='*Name' value={name} onChange={handleNameChange} />
           <label htmlFor='email' />
-          <input type='email' id='email' className='contactInput' name='email' placeholder='*Email Address' value={email} onChange={handleEmailChange} required/>
+          <input type='email' id='email' className='contactInput' name='email' placeholder='*Email Address' value={email} onChange={handleEmailChange} />
           <label htmlFor='subject' />
           <input type='text' id='subject' className='contactInput' name='subject' placeholder='Subject' value={subject} onChange={handleSubjectChange}/>
         </div>
         <div className='formMessage'>
           <label htmlFor='message' />
-          <textarea id='message' className='contactInput' name='message' placeholder='*Message' value={message} onChange={handleMessageChange} required></textarea>
+          <textarea id='message' className='contactInput' name='message' placeholder='*Message' value={message} onChange={handleMessageChange} ></textarea>
         </div>
         <div className='formFeedback'>
           {sentError && <b id='warning'>*Please fill out all required fields</b>}
           {sent && <b id='success'>Success! Thank you for reaching out!</b>}
         </div>
         <div className='submitRow'>
-          <button className='sendEmail' onClick={(e) => { e.preventDefault(); setMessage(messageGenerator())}}>Generate</button>
-          <input type='submit' value='Send' className='sendEmail' disabled={isLoading}/>
+          {/* <button className='contactBtn' onClick={(e) => { e.preventDefault(); setMessage(messageGenerator())}}>Generate</button> */}
+          <button type='submit' className='contactBtn' disabled={isLoading}> 
+            Submit { sent ? <BsFillSendCheckFill size={18} /> 
+              : isLoading ? <BsFillSendSlashFill size={18}/> 
+              : sentError ? <BsFillSendExclamationFill size={18}/> 
+              : <BsFillSendFill/> }
+          </button>
         </div>
       </form>
       <p>Feel free to reach out to me at <a href='mailto:naderantar96@gmail.com'>NaderAntar96@gmail.com</a></p>
