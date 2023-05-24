@@ -95,19 +95,19 @@ function Contact() {
       <form className='ContactForm' onSubmit={sendMail}>
         <div className='formField'>
           <label htmlFor='name' />
-          <input type='text' id='name' className='contactInput' name='name' placeholder='*Name' value={name} onChange={handleNameChange} />
+          <input type='text' id='name' className='contactInput' name='name' placeholder='*Name' value={name} onChange={handleNameChange} required/>
           <label htmlFor='email' />
-          <input type='email' id='email' className='contactInput' name='email' placeholder='*Email Address' value={email} onChange={handleEmailChange}/>
+          <input type='email' id='email' className='contactInput' name='email' placeholder='*Email Address' value={email} onChange={handleEmailChange} required/>
           <label htmlFor='subject' />
           <input type='text' id='subject' className='contactInput' name='subject' placeholder='Subject' value={subject} onChange={handleSubjectChange}/>
         </div>
         <div className='formMessage'>
           <label htmlFor='message' />
-          <textarea id='message' className='contactInput' name='message' placeholder='*Message' value={message} onChange={handleMessageChange} ></textarea>
+          <textarea id='message' className='contactInput' name='message' placeholder='*Message' value={message} onChange={handleMessageChange} required></textarea>
         </div>
         <div className='formFeedback'>
-          {sentError && <p id='warning'>*Please fill out all required fields</p>}
-          {sent && <p id='success'>Success! Thank you for reaching out!</p>}
+          {sentError && <b id='warning'>*Please fill out all required fields</b>}
+          {sent && <b id='success'>Success! Thank you for reaching out!</b>}
         </div>
         <div className='submitRow'>
           <button className='sendEmail' onClick={(e) => { e.preventDefault(); setMessage(messageGenerator())}}>Generate</button>

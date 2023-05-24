@@ -25,6 +25,8 @@ p, b {
   --contact-input-bg-color: #161616;
   --contact-text-color: #FFFFFF;
   --transparent-bg: #161616;
+  --success-color: #11f51c;
+  --warning-color: #fc9c2f;
 }
 
 .light {
@@ -39,6 +41,8 @@ p, b {
   --contact-text-color: #161616;
   --contact-border-color: #161616;
   --transparent-bg: #f2f2f231;
+  --success-color: #279242;
+  --warning-color: #fd6602;
 }
 
 .primaryDefault {
@@ -53,6 +57,14 @@ p, b {
   background-color: var(--transparent-bg);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 1;
+}
+
+#success {
+  color: var(--success-color);
+}
+
+#warning {
+  color: var(--warning-color);
 }
 
 @media screen and (max-width: 850px) {

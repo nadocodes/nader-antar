@@ -97,14 +97,6 @@
     padding: 5px;
 }
 
-#success {
-    color: #35af35;
-}
-
-#warning {
-    color: #fc9c2f;
-}
-
 @media screen and (max-width: 768px) {
     .ContactForm {
         width: 75%;
