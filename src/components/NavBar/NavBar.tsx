@@ -16,7 +16,7 @@ function NavBar(props: { toggleTheme: () => void } & { theme: string } & { handl
                 <li><a className="navLinks" href="#projects" onClick={handleScroll}>Projects</a></li> |
                 <li><a className="navLinks" href="#contact" onClick={handleScroll}>Contact</a></li>
             </ul>
-            <button className='themeButton' onClick={toggleTheme} aria-label='Toggle Theme Button'><img alt='Theme Toggle Icon' src={theme === 'dark' ? LightButton : DarkButton} /></button>
+            <button className='themeButton' onClick={toggleTheme} aria-label='Toggle Theme Button'><img alt='Theme Toggle Icon' src={theme === 'dark' ? LightButton : DarkButton} className='themeIcon'/></button>
         </nav>
     </div>
   )
