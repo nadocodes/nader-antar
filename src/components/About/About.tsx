@@ -46,7 +46,7 @@ function About() {
                     {skills.map((skill) => { 
                         const Icon = skillIcons[skill];
                     return ( 
-                            <div key={`skill: ${skill}`} className='skill skillTip'>
+                            <div key={`skill: ${skill}`} className='skill skillTip' aria-label={skill}>
                                 <span className="skillTipText">{skill}</span>
                                 <Icon size={50} />
                             </div>
