@@ -12,17 +12,17 @@ function Contact() {
   const [sentError, setSentError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const messageGenerator = () => {
-    // List of massage suggestions with name tracking if provided by the user
-    const messages = [
-      `Hi Nader, \n\n${name ? `My name is ${name.split(' ')[0]} and ` : ''}I came across your portfolio while searching for a front-end web developer. I'd love to set up a time to discuss potential opportunities at our company.`,
-      `Greetings Nader, \n\n${name ?`I'm ${name.split(' ')[0]} and ` : ''}I am impressed with your skills as a front-end web developer. Our company is looking for someone with your expertise to join our team. Would you be interested in discussing the role further?`,
-      `Dear Nader, \n\n${name ? `My name is ${name.split(' ')[0]} and ` : ''}I am the hiring manager for a front-end web developer role at our company. I came across your portfolio and I think you would be a great fit. Would you be available to talk about the role and your experience?`];
-    // Generate a random number between 0 and the length of the messages array to select a random message
-    const randomNum = Math.floor(Math.random() * messages.length);
-    // Return the message with the name if it was provided by the user
-    return messages[randomNum] + `\n\n` + `Kind regards,` + `\n` + `${name.split(' ')[0] || ''}`;
-  }
+  // const messageGenerator = () => {
+  //   // List of massage suggestions with name tracking if provided by the user
+  //   const messages = [
+  //     `Hi Nader, \n\n${name ? `My name is ${name.split(' ')[0]} and ` : ''}I came across your portfolio while searching for a front-end web developer. I'd love to set up a time to discuss potential opportunities at our company.`,
+  //     `Greetings Nader, \n\n${name ?`I'm ${name.split(' ')[0]} and ` : ''}I am impressed with your skills as a front-end web developer. Our company is looking for someone with your expertise to join our team. Would you be interested in discussing the role further?`,
+  //     `Dear Nader, \n\n${name ? `My name is ${name.split(' ')[0]} and ` : ''}I am the hiring manager for a front-end web developer role at our company. I came across your portfolio and I think you would be a great fit. Would you be available to talk about the role and your experience?`];
+  //   // Generate a random number between 0 and the length of the messages array to select a random message
+  //   const randomNum = Math.floor(Math.random() * messages.length);
+  //   // Return the message with the name if it was provided by the user
+  //   return messages[randomNum] + `\n\n` + `Kind regards,` + `\n` + `${name.split(' ')[0] || ''}`;
+  // }
 
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     // Set the state of name to the value of the input
