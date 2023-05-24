@@ -47,6 +47,21 @@
     color: var(--secondary-bg-color);
 }
 
+.skillTip .skillTipText {
+    visibility: hidden;
+    width: 120px;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 0.5rem;
+    position: absolute;
+    bottom: 8px;
+    z-index: 1;
+}
+
+.skillTip:hover .skillTipText {
+    visibility: visible;
+}
+
 @media screen and (max-width: 1024px) {
     .aboutContainer {
         width: 95%;
@@ -64,5 +79,8 @@
     .skill {
         width: 70px;
         height: 70px;
+    }
+    .skillTip .skillTipText {
+        bottom: -1px;
     }
 }

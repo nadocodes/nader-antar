@@ -16,22 +16,22 @@ import { SiJquery,
 import './About.css';
 
 function About() {
-    const skills = ['html5', 'css3', 'JavaScript', 'python', 'react', 'redux', 'typeScript', 'jquery', 'node.js', 'GitHub', 'git', 'netlify', 'figma', 'Adobe Creative Suite'];
+    const skills = ['html5', 'css3', 'JavaScript', 'Python', 'React', 'Redux', 'TypeScript', 'jQuery', 'node.js', 'GitHub', 'git', 'Netlify', 'Figma', 'Adobe Creative Suite'];
     
     const skillIcons: any = {
         'html5': FaHtml5,
         'css3': FaCss3Alt,
         'JavaScript': FaJsSquare,
-        'python': FaPython,
-        'jquery': SiJquery,
-        'react': FaReact,
-        'redux': SiRedux,
-        'typeScript': SiTypescript,
+        'Python': FaPython,
+        'jQuery': SiJquery,
+        'React': FaReact,
+        'Redux': SiRedux,
+        'TypeScript': SiTypescript,
         'node.js': FaNodeJs,
         'git': FaGitAlt,
         'GitHub': FaGithub,
-        'netlify': SiNetlify,
-        'figma': FaFigma,
+        'Netlify': SiNetlify,
+        'Figma': FaFigma,
         'Adobe Creative Suite': SiAdobe
     }
 
@@ -46,7 +46,8 @@ function About() {
                     {skills.map((skill) => { 
                         const Icon = skillIcons[skill];
                     return ( 
-                            <div key={`skill: ${skill}`} className='skill'>
+                            <div key={`skill: ${skill}`} className='skill skillTip'>
+                                <span className="skillTipText">{skill}</span>
                                 <Icon size={50} />
                             </div>
                         )})}
