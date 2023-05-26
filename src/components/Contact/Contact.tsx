@@ -116,7 +116,7 @@ function Contact() {
             Submit { sent ? <BsFillSendCheckFill size={18} /> 
               : isLoading ? <BsFillSendSlashFill size={18}/> 
               : sentError ? <BsFillSendExclamationFill size={18}/> 
-              : <BsFillSendFill/> }
+              : <BsFillSendFill size={18}/> }
           </button>
         </div>
       </form>
