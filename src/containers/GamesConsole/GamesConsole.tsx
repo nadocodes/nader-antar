@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { AiFillHome } from 'react-icons/ai';
 import RockPaperScissors from '../../components/Games/RockPaperScissors/RockPaperScissors';
 import MemoryGame from '../../components/Games/MemoryGame/MemoryGame';
@@ -7,9 +7,17 @@ import './GamesConsole.css';
 export default function Games() {
     const [menu, setMenu] = useState(true);
     const [game, setGame] = useState('');
+    const [date, setDate] = useState(new Date());
 
     // Game ids
     const gamesId: string[] = ['RockPaperScissors', 'MemoryGame', '', '', ''];
+
+    useEffect(() => {
+        const timer = setInterval(() => setDate(new Date()), 1000);
+        return function cleanup() {
+            clearInterval(timer);
+        }
+    }, [])
 
     // Games database
     const gamesDB: any = {
@@ -44,9 +52,16 @@ export default function Games() {
                 </div>
             )
     })
+    
 
     return (
         <div className='gamesContainer'>
+            <div className='taskBar'>
+                <div className="date">
+                    <div>{date.toLocaleTimeString('en-GB', {hour: '2-digit', minute: '2-digit'})}</div>
+                    <div>{date.toLocaleDateString('en-GB', {weekday: 'long', day: 'numeric', month: 'long'})}</div>
+                </div>
+            </div>
             <div className='gamesConsole'>
                 {menu && <div className="menu">
                     <h3 className="menuTitle">Apps</h3>
