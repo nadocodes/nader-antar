@@ -59,7 +59,7 @@ function Projects() {
         <div className='projectCard'>
           <img src={UnderConstruction} alt='Social Discussion App under construction' className='projectCardImg' />
           <h4>Social Discussion App</h4>
-          <p>A Reddit style application that allows users to socially interact with posts. <br/> <span id='warning'>*Under Construction</span></p>
+          <p>A Reddit style application that allows users to socially interact with posts. <br/> <b id='warning'>*Under Construction*</b></p>
           <div className='projectButtons'>
             <a className='projectDemoBtn projectLink' href='https://github.com/nadocodes/' target='_blank'  ><GoRepo/></a>
             {/* <a className='projectDemoBtn projectLink' href='https://pushplaylisten.netlify.app/' target='_blank' >Live View <FaExternalLinkAlt/></a> */}

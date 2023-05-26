@@ -34,7 +34,6 @@
 .projectCard:hover {
     box-shadow: 0.35rem 0.5rem 7px rgba(0, 0, 0, 0.6);
     border-color: var(--secondary-bg-color);
-
     transform: translateY(-1.5rem) scale(1.15);
 }
 
@@ -102,5 +101,8 @@
     .projectCardImg {
         max-width: 95%;
         max-height: 85%;
+    }
+    .projectCard:hover {
+        transform: translateY(0px) scale(1.15);
     }
 }
