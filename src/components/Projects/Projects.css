@@ -28,13 +28,14 @@
     border-radius: 10px;
     background-color: var(--transparent-bg);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transition: scale 0.15s ease-in-out;
+    transition: transform 0.15s ease-in-out;
 }
 
 .projectCard:hover {
     box-shadow: 0.35rem 0.5rem 7px rgba(0, 0, 0, 0.6);
     border-color: var(--secondary-bg-color);
-    scale: 1.2;
+
+    transform: translateY(-1.5rem) scale(1.15);
 }
 
 .projectCard p {
@@ -84,7 +85,7 @@
     border-radius: 10px;
     background-color: var(--primary-bg-color);
     border: 2px solid var(--border-color);
-    height: 30px;
+    height: 40px;
     gap: 10px;
     text-decoration: none;
 }
