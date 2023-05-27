@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { IoBatteryHalfOutline } from 'react-icons/io5';
 import { AiFillHome } from 'react-icons/ai';
 import RockPaperScissors from '../../components/Games/RockPaperScissors/RockPaperScissors';
 import MemoryGame from '../../components/Games/MemoryGame/MemoryGame';
@@ -60,6 +61,7 @@ export default function Games() {
                 <div className="date">
                     <div>{date.toLocaleTimeString('en-GB', {hour: '2-digit', minute: '2-digit'})}</div>
                     <div>{date.toLocaleDateString('en-GB', {weekday: 'long', day: 'numeric', month: 'long'})}</div>
+                    <IoBatteryHalfOutline size={20}/>
                 </div>
             </div>
             <div className='gamesConsole'>
