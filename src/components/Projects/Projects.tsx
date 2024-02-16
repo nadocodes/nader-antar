@@ -16,7 +16,7 @@ function Projects() {
       .then(response => response.json())
       .then((data) => {
         console.log(data); // Log to see the actual structure
-        setProjects(data.items);
+        setProjects(data);
       })
       .catch(console.error);
   }, []);
