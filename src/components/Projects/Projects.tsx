@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Project, ProjectsResponse } from './types'; 
 import { GoRepo } from 'react-icons/go';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import PushPlayListen from '../../assets/pushplaylistenScreenshot.png';
@@ -8,6 +9,16 @@ import UnderConstruction from '../../assets/undrawUnderConstruction.svg';
 import './Projects.css';
 
 function Projects() {
+  const [projects, setProjects] = useState<Project[]>([]);
+
+  useEffect(() => {
+    fetch('/.netlify/functions/fetchProjects')
+      .then(response => response.json())
+      .then((data: ProjectsResponse) => {
+        setProjects(data.items);
+      })
+      .catch(console.error);
+  }, []);
   
   // // Handle click on project card
   // const handleActiveProject = (e: any) => {
@@ -27,46 +38,70 @@ function Projects() {
   // }
 
   return (
+    // Dynamic Projects
     <div className='Projects primaryDefault' id='projects'>
       <h2 className="projectsTitle">Personal Projects</h2>
       <div className='projectsContainer'>
-        <div className='projectCard'>
-          <img src={Portfolio2023} alt='Portfolio 2023 Project Image' className='projectCardImg' />
-          <h4>Portfolio 2023</h4>
-          <p>Portfolio coded from scratch to showcase personal profile.</p>
-          <div className='projectButtons'>
-            <a className='projectDemoBtn projectLink' href='https://github.com/nadocodes/nader-antar.git' target='_blank'  ><GoRepo/></a>
+        {projects.map((project, index) => (
+          <div className='projectCard' key={index}>
+            {/* Adjust the following lines according to your data structure */}
+            <img src={project.fields.projectImage.fields.file.url} alt={project.fields.projectName} className='projectCardImg' />
+            <h4>{project.fields.projectName}</h4>
+            <p>{project.fields.projectDescription}</p>
+            <div className='projectButtons'>
+              {project.fields.repoLink && (
+                <a className='projectDemoBtn projectLink' href={project.fields.repoLink} target='_blank' rel="noopener noreferrer"><GoRepo/></a>
+              )}
+              {project.fields.projectLink && (
+                <a className='projectDemoBtn projectLink' href={project.fields.projectLink} target='_blank' rel="noopener noreferrer">Live View <FaExternalLinkAlt/></a>
+              )}
+            </div>
           </div>
-        </div>
-        <div className='projectCard'>
-          <img src={PushPlayListen} alt='PushPlayListen Project Image' className='projectCardImg' />
-          <h4>PushPlayListen</h4>
-          <p>A responsive playlist app uses authentication Spotify's Api.</p>
-          <div className='projectButtons'>
-            <a className='projectCodeBtn projectLink' href='https://github.com/nadocodes/pushplaylisten-react-app.git' target='_blank'  ><GoRepo/></a>
-            <a className='projectDemoBtn projectLink' href='https://pushplaylisten.netlify.app/' target='_blank' >Live View <FaExternalLinkAlt/></a>
-          </div>
-        </div>
-        <div className='projectCard'>
-          <img src={WatchDogsFanPage} alt='Watchdogs 2 Fan Page Project Image' className='projectCardImg' />
-          <h4>Watchdogs 2 Fanpage</h4>
-          <p>A video game fan page produced as challenge to evolve technical skill set.</p>
-          <div className='projectButtons'>
-            <a className='projectCodeBtn projectLink' href='https://github.com/nadocodes/watchdogs2-fanpage.git' target='_blank'  ><GoRepo/></a>
-            <a className='projectDemoBtn projectLink' href='https://nadocodes.github.io/watchdogs2-fanpage/' target='_blank' >Live View <FaExternalLinkAlt/></a>
-          </div>
-        </div>
-        <div className='projectCard'>
-          <img src={UnderConstruction} alt='Social Discussion App under construction' className='projectCardImg' />
-          <h4>Social Discussion App</h4>
-          <p>A Reddit style application that allows users to socially interact with posts. <br/> <b id='warning'>*Under Construction*</b></p>
-          <div className='projectButtons'>
-            <a className='projectDemoBtn projectLink' href='https://github.com/nadocodes/' target='_blank'  ><GoRepo/></a>
-            {/* <a className='projectDemoBtn projectLink' href='https://pushplaylisten.netlify.app/' target='_blank' >Live View <FaExternalLinkAlt/></a> */}
-          </div>
-        </div>
+        ))}
       </div>
     </div>
+
+    // Static Projects
+    // <div className='Projects primaryDefault' id='projects'>
+    //   <h2 className="projectsTitle">Personal Projects</h2>
+    //   <div className='projectsContainer'>
+    //     <div className='projectCard'>
+    //       <img src={Portfolio2023} alt='Portfolio 2023 Project Image' className='projectCardImg' />
+    //       <h4>Portfolio 2023</h4>
+    //       <p>Portfolio coded from scratch to showcase personal profile.</p>
+    //       <div className='projectButtons'>
+    //         <a className='projectDemoBtn projectLink' href='https://github.com/nadocodes/nader-antar.git' target='_blank'  ><GoRepo/></a>
+    //       </div>
+    //     </div>
+    //     <div className='projectCard'>
+    //       <img src={PushPlayListen} alt='PushPlayListen Project Image' className='projectCardImg' />
+    //       <h4>PushPlayListen</h4>
+    //       <p>A responsive playlist app uses authentication Spotify's Api.</p>
+    //       <div className='projectButtons'>
+    //         <a className='projectCodeBtn projectLink' href='https://github.com/nadocodes/pushplaylisten-react-app.git' target='_blank'  ><GoRepo/></a>
+    //         <a className='projectDemoBtn projectLink' href='https://pushplaylisten.netlify.app/' target='_blank' >Live View <FaExternalLinkAlt/></a>
+    //       </div>
+    //     </div>
+    //     <div className='projectCard'>
+    //       <img src={WatchDogsFanPage} alt='Watchdogs 2 Fan Page Project Image' className='projectCardImg' />
+    //       <h4>Watchdogs 2 Fanpage</h4>
+    //       <p>A video game fan page produced as challenge to evolve technical skill set.</p>
+    //       <div className='projectButtons'>
+    //         <a className='projectCodeBtn projectLink' href='https://github.com/nadocodes/watchdogs2-fanpage.git' target='_blank'  ><GoRepo/></a>
+    //         <a className='projectDemoBtn projectLink' href='https://nadocodes.github.io/watchdogs2-fanpage/' target='_blank' >Live View <FaExternalLinkAlt/></a>
+    //       </div>
+    //     </div>
+    //     <div className='projectCard'>
+    //       <img src={UnderConstruction} alt='Social Discussion App under construction' className='projectCardImg' />
+    //       <h4>Social Discussion App</h4>
+    //       <p>A Reddit style application that allows users to socially interact with posts. <br/> <b id='warning'>*Under Construction*</b></p>
+    //       <div className='projectButtons'>
+    //         <a className='projectDemoBtn projectLink' href='https://github.com/nadocodes/' target='_blank'  ><GoRepo/></a>
+    //         {/* <a className='projectDemoBtn projectLink' href='https://pushplaylisten.netlify.app/' target='_blank' >Live View <FaExternalLinkAlt/></a> */}
+    //       </div>
+    //     </div>
+    //   </div>
+    // </div>
   )
 }
 
