@@ -43,22 +43,25 @@ function Projects() {
     <div className='Projects primaryDefault' id='projects'>
       <h2 className="projectsTitle">Personal Projects</h2>
       <div className='projectsContainer'>
-        {Array.isArray(projects) ? projects.map((project, index) => (
-          <div className='projectCard' key={index}>
-            {/* Adjust the following lines according to your data structure */}
-            <img src={project.fields.projectImage.fields.file.url} alt={project.fields.projectName} className='projectCardImg' />
-            <h4>{project.fields.projectName}</h4>
-            <p>{project.fields.projectDescription}</p>
-            <div className='projectButtons'>
-              {project.fields.repoLink && (
-                <a className='projectDemoBtn projectLink' href={project.fields.repoLink} target='_blank' rel="noopener noreferrer"><GoRepo/></a>
-              )}
-              {project.fields.projectLink && (
-                <a className='projectDemoBtn projectLink' href={project.fields.projectLink} target='_blank' rel="noopener noreferrer">Live View <FaExternalLinkAlt/></a>
-              )}
-            </div>
-          </div>
-        )) : <p>No projects to display</p>}
+        {Array.isArray(projects) && projects.length > 0 ? projects.map((project, index) => {
+            // Ensure we have a valid URL before attempting to render the image
+            const imageUrl = project.fields.projectImage?.fields?.file?.url;
+            return (
+              <div className='projectCard' key={project.sys.id || index}>
+                <img src={imageUrl} alt={project.fields.projectName} className='projectCardImg' />
+                <h4>{project.fields.projectName}</h4>
+                <p>{project.fields.projectDescription}</p>
+                <div className='projectButtons'>
+                  {project.fields.repoLink && (
+                    <a className='projectDemoBtn projectLink' href={project.fields.repoLink} target='_blank' rel="noopener noreferrer"><GoRepo/></a>
+                  )}
+                  {project.fields.projectLink && (
+                    <a className='projectDemoBtn projectLink' href={project.fields.projectLink} target='_blank' rel="noopener noreferrer">Live View <FaExternalLinkAlt/></a>
+                  )}
+                </div>
+              </div>
+            );
+        }) : <p>No projects to display</p>}
       </div>
     </div>
 
