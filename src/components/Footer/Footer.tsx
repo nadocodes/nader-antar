@@ -9,7 +9,7 @@ function Footer() {
           <a href='https://github.com/nadocodes' target='_blank' rel='noopener noreferrer'>
             <FaGithub size={30} />
           </a>
-          <a href='https://www.linkedin.com/in/nader-antar/' target='_blank' rel='noopener noreferrer'>
+          <a href='https://www.linkedin.com/in/naderantar/' target='_blank' rel='noopener noreferrer'>
             <FaLinkedin size={30} />
           </a>
           <a href='mailto:naderantar96@gmail.com'>

@@ -13,6 +13,8 @@
     box-shadow: 0.35rem 0.5rem 7px rgba(0, 0, 0, 0.8);
     background: var(--secondary-bg-color);
     margin-bottom: 20px;
+    z-index: 1;
+    position: relative;
 }
 
 .taskBar {
@@ -26,6 +28,7 @@
     border-radius: 6px 6px 0px 0px;
     font-size: 0.9rem;
     color: var(--text-color);
+    z-index: 2;
 }
 
 .date {
@@ -52,6 +55,7 @@
     justify-content: center;
     width: 100%;
     height: 85%;
+    z-index: 1;
 }
 
 .games {
@@ -126,6 +130,7 @@
     background-color: var(--primary-bg-color);
     border-top: 2.5px solid var(--border-color);
     border-radius: 5px;
+    z-index: 2;
 }
 
 .menuButton {
@@ -147,6 +152,16 @@
     box-shadow: 0 1px #666;
     transform: translateY(1px);
 }
+
+/* .consoleBG {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+} */
 
 @media screen and (max-width: 768px) {
     .gamesContainer {

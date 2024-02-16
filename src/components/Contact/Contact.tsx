@@ -5,6 +5,7 @@ import './Contact.css';
 
 function Contact() {
   const [name, setName] = useState('');
+  const [sentName, setSentName] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
@@ -76,6 +77,7 @@ function Contact() {
         setEmail('');
         setSubject('');
         setMessage('');
+        setSentName(name);
         // Set the state of sent to true
         setSent(true);
         // Set the state of sentError to false
@@ -108,7 +110,7 @@ function Contact() {
         </div>
         <div className='formFeedback'>
           {sentError && <b id='warning'>*Please fill out all required fields</b>}
-          {sent && <b id='success'>Success! Thank you for reaching out!</b>}
+          {sent && <b id='success'><span>Success!</span><br/>Thank you {sentName} for reaching out!</b>}
         </div>
         <div className='submitRow'>
           {/* <button className='contactBtn' onClick={(e) => { e.preventDefault(); setMessage(messageGenerator())}}>Generate</button> */}

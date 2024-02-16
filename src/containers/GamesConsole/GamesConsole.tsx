@@ -3,6 +3,7 @@ import { IoBatteryHalfOutline } from 'react-icons/io5';
 import { AiFillHome } from 'react-icons/ai';
 import RockPaperScissors from '../../components/Games/RockPaperScissors/RockPaperScissors';
 import MemoryGame from '../../components/Games/MemoryGame/MemoryGame';
+// import MinimalisticSamurai from '../../assets/minimalistic-samurai.1920x1080.mp4';
 import './GamesConsole.css';
 
 export default function Games() {
@@ -10,15 +11,15 @@ export default function Games() {
     const [game, setGame] = useState('');
     const [date, setDate] = useState(new Date());
 
-    // Game ids
-    const gamesId: string[] = ['RockPaperScissors', 'MemoryGame', '', '', ''];
-
     useEffect(() => {
         const timer = setInterval(() => setDate(new Date()), 1000);
         return function cleanup() {
             clearInterval(timer);
         }
     }, [])
+    
+    // Game ids
+    const gamesId: string[] = ['RockPaperScissors', 'MemoryGame', '', '', ''];
 
     // Games database
     const gamesDB: any = {
@@ -64,6 +65,9 @@ export default function Games() {
                     <IoBatteryHalfOutline size={20}/>
                 </div>
             </div>
+                {/* <video className='consoleBG'autoPlay muted loop>
+                    <source src={MinimalisticSamurai} type="video/mp4" />
+                </video> */}
             <div className='gamesConsole'>
                 {menu && <div className="menu">
                     <h3 className="menuTitle">Apps</h3>
