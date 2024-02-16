@@ -7,13 +7,14 @@ exports.handler = async function(event, context) {
     });
 
     try {
+        // Fetch entries of the 'projects' content type
         const data = await client.getEntries({
-        content_type: 'projects', // Replace with your Contentful content type ID
+            content_type: 'projects', // Use the ID of your content model here
         });
 
         return {
-        statusCode: 200,
-        body: JSON.stringify(data.items),
+            statusCode: 200,
+            body: JSON.stringify(data.items),
         };
     } catch (error) {
         return { statusCode: 500, body: JSON.stringify({ msg: error.toString() }) };
