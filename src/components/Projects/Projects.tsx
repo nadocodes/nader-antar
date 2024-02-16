@@ -14,7 +14,8 @@ function Projects() {
   useEffect(() => {
     fetch('/.netlify/functions/fetchProjects')
       .then(response => response.json())
-      .then((data: ProjectsResponse) => {
+      .then((data) => {
+        console.log(data); // Log to see the actual structure
         setProjects(data.items);
       })
       .catch(console.error);
@@ -42,7 +43,7 @@ function Projects() {
     <div className='Projects primaryDefault' id='projects'>
       <h2 className="projectsTitle">Personal Projects</h2>
       <div className='projectsContainer'>
-        {projects.map((project, index) => (
+        {Array.isArray(projects) ? projects.map((project, index) => (
           <div className='projectCard' key={index}>
             {/* Adjust the following lines according to your data structure */}
             <img src={project.fields.projectImage.fields.file.url} alt={project.fields.projectName} className='projectCardImg' />
@@ -57,7 +58,7 @@ function Projects() {
               )}
             </div>
           </div>
-        ))}
+        )) : <p>No projects to display</p>}
       </div>
     </div>
 
