@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Project, ProjectsResponse } from './types'; 
 import { GoRepo } from 'react-icons/go';
 import { FaExternalLinkAlt } from 'react-icons/fa';
-import PushPlayListen from '../../assets/pushplaylistenScreenshot.png';
-import Portfolio2023 from '../../assets/portfolio2023Screenshot.jpg';
-import WatchDogsFanPage from '../../assets/watchdogsFanPageScreenshot.jpg';
-import UnderConstruction from '../../assets/undrawUnderConstruction.svg';
+// import PushPlayListen from '../../assets/pushplaylistenScreenshot.png';
+// import Portfolio2023 from '../../assets/portfolio2023Screenshot.jpg';
+// import WatchDogsFanPage from '../../assets/watchdogsFanPageScreenshot.jpg';
+// import UnderConstruction from '../../assets/undrawUnderConstruction.svg';
 import './Projects.css';
 
 function Projects() {
