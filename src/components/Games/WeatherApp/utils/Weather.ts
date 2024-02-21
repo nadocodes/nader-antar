@@ -1,6 +1,6 @@
 import axios from 'axios';
 const endpoint = 'https://api.weatherapi.com/v1';
-const access_key = process.env.REACT_APP_WEATHERAPI_TOKEN;
+const access_key = `${process.env.REACT_APP_WEATHERAPI_TOKEN}`;
 
 const getCurrentWeather = async (city: string) => {
     try {
