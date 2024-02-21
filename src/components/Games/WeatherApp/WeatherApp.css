@@ -1,0 +1,182 @@
+.WeatherApp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 320px;
+  height: 560px;
+  color: #FFFFFF;
+  background-color: #242424;
+  text-align: center;
+}
+
+.search-container {
+  position: relative;
+  width: 100%; /* Adjust based on your design */
+  margin-top: 0.2rem;
+}
+
+.search-input {
+  width: 65%;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.suggestions-container {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  position: absolute;
+  top: 100%; /* Directly below the input field */
+  left: 15%; /* Center align with the input */
+  width: 65%; /* Match input field width */
+  z-index: 1; /* Ensure it's above other content */
+  max-height: 75px;
+  overflow-y: auto;
+  list-style-type: none;
+  padding: 0 0.5em;
+  margin: 0;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 #000000;
+}
+
+.suggestions-container::-webkit-scrollbar {
+  display: block;
+  width: 5px; /* Smaller width */
+}
+
+.suggestions-container::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+}
+
+.suggestions-container::-webkit-scrollbar-thumb {
+  background: #888; /* Thumb color */
+  border-radius: 5px; /* Rounder thumb */
+}
+
+.suggestions-container::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Thumb color when hovered */
+}
+
+.suggestion-item {
+  font-size: 0.8rem;
+  padding: 5px;
+  cursor: pointer;
+  color: #000;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+
+.forecast {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.forecast-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  justify-content: space-between;
+  max-height: 100%;
+  width: 90%;
+}
+
+.forecast-container p {
+  margin: 0;
+}
+
+.weather-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.weather-footer {
+  position: relative;
+  width: 100%;
+  font-size: 0.8rem;
+  margin: 0 auto;
+}
+
+.current-weather {
+  width: 100%;
+  /* margin-bottom: 0.5em; */
+}
+
+.current-city {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0;
+}
+
+.current-country {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.temp {
+  font-weight: 700;
+  margin: 0;
+}
+
+.forecast-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.today-forecast {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.hourly-forecast {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-width: 300px;
+  overflow-x: scroll;
+  padding: 0.5em 0 0.5em 0;
+  margin-bottom: 0.5em;
+}
+
+.hourly-forecast img {
+  width: 25px;
+  height: 25px;
+}
+
+.hourly-forecast::-webkit-scrollbar {
+  display: block;
+  width: 5px; /* Smaller width */
+  height: 5px;
+}
+
+.hourly-forecast::-webkit-scrollbar-track {
+  background: #f1f1f117; /* Track color */
+  border-radius: 5px; /* Rounder track */
+}
+
+.hourly-forecast::-webkit-scrollbar-thumb {
+  background: #888; /* Thumb color */
+  border-radius: 5px; /* Rounder thumb */
+}
+
+.hourly-forecast::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Thumb color when hovered */
+}
+
+button {
+  cursor: pointer;
+  transition: border-color 0.25s;
+}

@@ -3,6 +3,7 @@ import { IoBatteryHalfOutline } from 'react-icons/io5';
 import { AiFillHome } from 'react-icons/ai';
 import RockPaperScissors from '../../components/Games/RockPaperScissors/RockPaperScissors';
 import MemoryGame from '../../components/Games/MemoryGame/MemoryGame';
+import WeatherApp from '../../components/Games/WeatherApp/WeatherApp';
 // import MinimalisticSamurai from '../../assets/minimalistic-samurai.1920x1080.mp4';
 import './GamesConsole.css';
 
@@ -19,7 +20,7 @@ export default function Games() {
     }, [])
     
     // Game ids
-    const gamesId: string[] = ['RockPaperScissors', 'MemoryGame', '', '', ''];
+    const gamesId: string[] = ['RockPaperScissors', 'MemoryGame', 'WeatherApp', '', ''];
 
     // Games database
     const gamesDB: any = {
@@ -30,7 +31,11 @@ export default function Games() {
         'MemoryGame': {
             comp: <MemoryGame />,
             name: 'Memory Game'
-        }       
+        },
+        'WeatherApp': {
+            comp: <WeatherApp />,
+            name: 'Weather App'
+        }
     }
     
     // Set the menu to true and game to empty string

@@ -19,6 +19,7 @@
     "react-ts-typewriter": "^0.1.8-b"
   },
   "devDependencies": {
+    "@types/node": "^20.11.19",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
