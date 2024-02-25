@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Typewriter from 'react-ts-typewriter';
 import './Header.css';
-import ScriptSvgDark from '../../assets/script-dark.svg';
-import ScriptSvgLight from '../../assets/script-light.svg';
+// import ScriptSvgDark from '../../assets/script-dark.svg';
+// import ScriptSvgLight from '../../assets/script-light.svg';
 import Applications from '../../containers/PortableConsole/PortableConsole';
 
 function Header(props: { theme: string } & { handleScroll: (e: any) => void }) {
