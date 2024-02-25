@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { IoBatteryHalfOutline } from 'react-icons/io5';
 import { AiFillHome } from 'react-icons/ai';
-import RockPaperScissors from '../../components/Games/RockPaperScissors/RockPaperScissors';
-import MemoryGame from '../../components/Games/MemoryGame/MemoryGame';
-import WeatherApp from '../../components/Games/WeatherApp/WeatherApp';
+import RockPaperScissors from '../../components/Applications/RockPaperScissors/RockPaperScissors';
+import MemoryGame from '../../components/Applications/MemoryGame/MemoryGame';
+import WeatherApp from '../../components/Applications/WeatherApp/WeatherApp';
 // import MinimalisticSamurai from '../../assets/minimalistic-samurai.1920x1080.mp4';
-import './GamesConsole.css';
+import './PortableConsole.css';
 
-export default function Games() {
+export default function PortableConsole() {
     const [menu, setMenu] = useState(true);
-    const [game, setGame] = useState('');
+    const [app, setApp] = useState('');
     const [date, setDate] = useState(new Date());
 
     useEffect(() => {
@@ -19,11 +19,11 @@ export default function Games() {
         }
     }, [])
     
-    // Game ids
-    const gamesId: string[] = ['RockPaperScissors', 'MemoryGame', 'WeatherApp', '', ''];
+    // App ids
+    const appsId: string[] = ['RockPaperScissors', 'MemoryGame', 'WeatherApp', '', ''];
 
     // Games database
-    const gamesDB: any = {
+    const appsDB: any = {
         'RockPaperScissors': {
             comp: <RockPaperScissors />,
             name: 'Rock Paper Scissors'
@@ -38,31 +38,31 @@ export default function Games() {
         }
     }
     
-    // Set the menu to true and game to empty string
+    // Set the menu to true and app to empty string
     const handleMenu = (): void => {
         setMenu(true);
-        setGame('');
+        setApp('');
     }
 
-    // Set the game to the selected game and menu to false
-    const handleSelectGame = (gameSelected: string): void => {
-        if (gameSelected === '') return;
-        setGame(gameSelected);
+    // Set the app to the selected app and menu to false
+    const handleSelectApp = (appSelected: string): void => {
+        if (appSelected === '') return;
+        setApp(appSelected);
         setMenu(false);
     }
 
-    // Game selection buttons
-    const gameSelectionButtons = gamesId.map((gameId, idx) => {
+    // App selection buttons
+    const appSelectionButtons = appsId.map((appId, idx) => {
             return (
-                <div key={`game: ${idx} ${gameId}`} className="game">
-                    <button className="gameButton" onClick={() => handleSelectGame(gameId)}>{gamesDB[gameId] ? gamesDB[gameId].name : 'Coming Soon!'}</button>
+                <div key={`app: ${idx} ${appId}`} className="apps-item">
+                    <button className="appButton" onClick={() => handleSelectApp(appId)}>{appsDB[appId] ? appsDB[appId].name : 'Coming Soon!'}</button>
                 </div>
             )
     })
     
 
     return (
-        <div className='gamesContainer'>
+        <div className='appsContainer'>
             <div className='taskBar'>
                 <div className="date">
                     <div>{date.toLocaleTimeString('en-GB', {hour: '2-digit', minute: '2-digit'})}</div>
@@ -73,18 +73,18 @@ export default function Games() {
                 {/* <video className='consoleBG'autoPlay muted loop>
                     <source src={MinimalisticSamurai} type="video/mp4" />
                 </video> */}
-            <div className='gamesConsole'>
+            <div className='appsConsole'>
                 {menu && <div className="menu">
                     <h3 className="menuTitle">Apps</h3>
-                    <div className="games">
-                        {gameSelectionButtons}
+                    <div className="apps">
+                        {appSelectionButtons}
                     </div>
                 </div>}
-                {/* Display the selected game */}
-                {gamesDB[game] ? gamesDB[game].comp : null}
+                {/* Display the selected app */}
+                {appsDB[app] ? appsDB[app].comp : null}
             </div>
             <div className="controls">
-                <button className="menuButton" onClick={handleMenu} aria-label='Return to game selection button'><AiFillHome /></button>
+                <button className="menuButton" onClick={handleMenu} aria-label='Return to app selection button'><AiFillHome /></button>
             </div>
         </div>
     )

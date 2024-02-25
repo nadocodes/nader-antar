@@ -3,7 +3,7 @@ import Typewriter from 'react-ts-typewriter';
 import './Header.css';
 import ScriptSvgDark from '../../assets/script-dark.svg';
 import ScriptSvgLight from '../../assets/script-light.svg';
-import Games from '../../containers/GamesConsole/GamesConsole';
+import Applications from '../../containers/PortableConsole/PortableConsole';
 
 function Header(props: { theme: string } & { handleScroll: (e: any) => void }) {
   // theme prop passed from App.tsx
@@ -47,7 +47,7 @@ function Header(props: { theme: string } & { handleScroll: (e: any) => void }) {
         <br/>
         <a href='#contact' className='getInTouch' onClick={handleScroll}>Get in touch</a>
       </div>
-        <Games />
+        <Applications />
         {/* <img className="ScriptSvg" src={theme == 'dark' ? ScriptSvgDark : ScriptSvgLight} alt="Script" /> */}
       </div>
     </div>
