@@ -18,9 +18,9 @@ export default function PortableConsole() {
             clearInterval(timer);
         }
     }, [])
-    
+
     // App ids
-    const appsId: string[] = ['RockPaperScissors', 'MemoryGame', 'WeatherApp', '', ''];
+    const appsId: string[] = ['RockPaperScissors', 'MemoryGame', 'WeatherApp', '', '', ''];
 
     // Games database
     const appsDB: any = {
@@ -51,15 +51,28 @@ export default function PortableConsole() {
         setMenu(false);
     }
 
-    // App selection buttons
-    const appSelectionButtons = appsId.map((appId, idx) => {
-            return (
-                <div key={`app: ${idx} ${appId}`} className="apps-item">
-                    <button className="appButton" onClick={() => handleSelectApp(appId)}>{appsDB[appId] ? appsDB[appId].name : 'Coming Soon!'}</button>
-                </div>
-            )
-    })
-    
+    // Calculate number of pages
+    const numApps = appsId.length;
+    const appsPerPage = 6; // 3x2 grid
+    const numPages = Math.ceil(numApps / appsPerPage);
+
+    // Create the pages with apps
+    const pages = [];
+    for (let i = 0; i < numPages; i++) {
+        const startIndex = i * appsPerPage;
+        const endIndex = startIndex + appsPerPage;
+        const pageApps = appsId.slice(startIndex, endIndex);
+        const page = (
+            <div className="page" key={`page-${i}`}>
+                {pageApps.map((appId, idx) => (
+                    <div key={`app: ${idx} ${appId}`} className="apps-item">
+                        <button className="appButton" onClick={() => handleSelectApp(appId)}>{appsDB[appId] ? appsDB[appId].name : 'Coming Soon!'}</button>
+                    </div>
+                ))}
+            </div>
+        );
+        pages.push(page);
+    }
 
     return (
         <div className='appsContainer'>
@@ -76,9 +89,9 @@ export default function PortableConsole() {
             <div className='appsConsole'>
                 {menu && <div className="menu">
                     <h3 className="menuTitle">Apps</h3>
-                    <div className="apps">
-                        {appSelectionButtons}
-                    </div>
+                        <div className="apps">
+                            {pages}
+                        </div>
                 </div>}
                 {/* Display the selected app */}
                 {appsDB[app] ? appsDB[app].comp : null}
