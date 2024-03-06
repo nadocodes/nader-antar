@@ -89,7 +89,7 @@ export default function PortableConsole() {
             <div className='appsConsole'>
                 {menu && <div className="menu">
                     <h3 className="menuTitle">Apps</h3>
-                        <div className="apps">
+                        <div className={`apps${numPages == 1 ? ' hide-scrollbar' : ''}`}>
                             {pages}
                         </div>
                 </div>}

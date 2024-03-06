@@ -69,6 +69,10 @@ p, b {
   color: var(--warning-color);
 }
 
+.hide-scrollbar {
+  overflow-x: hidden;
+}
+
 @media screen and (max-width: 850px) {
   .primaryDefault {
     margin-bottom: 25px;

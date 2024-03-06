@@ -17,6 +17,11 @@
     position: relative;
 }
 
+.appsContainer:hover {
+    /* transform: scale(1.05); */
+    box-shadow: 0 0 100px 0.05px var(--secondary-bg-color);
+}
+
 .taskBar {
     display: flex;
     flex-direction: row;
@@ -69,8 +74,26 @@
     margin: 25px auto;
     height: 100%;
     padding: 10px 0px;
-    overflow-y: auto;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
 }
+
+.apps::-webkit-scrollbar {
+    display: block;
+    width: 5px; /* Smaller width */
+    height: 0.5rem; /* Smaller height */
+}
+
+.apps::-webkit-scrollbar-track {
+background: var(--bg-gradient); /* Track color */
+border-radius: 40rem; /* Rounder track */
+}
+
+.apps::-webkit-scrollbar-thumb {
+background: var(--text-color); /* Thumb color */
+border-radius: 40rem; /* Rounder thumb */
+}
+
 
 .page {
     display: grid;
@@ -79,6 +102,7 @@
     grid-template-rows: repeat(3, 1fr);
     width: 100%;
     height: 100%;
+    scroll-snap-align: start;
 }
 
 .apps-item {
@@ -87,7 +111,7 @@
 }
 
 .menu {
-    height: 90%;
+    height: 95%;
     width: 100%;
     display: flex;
     flex-direction: column;
